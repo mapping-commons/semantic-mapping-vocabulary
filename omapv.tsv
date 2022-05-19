@@ -1,5 +1,0 @@
-Element ID	Label	Description	Parent
-ID	LABEL	A dc:description	SC %
-OMAPV:Match	A match is a correspondence between the subject and an object as determined by some agent, such as a human or a software tool.	
-OMAPV:LexicalMatch	lexical match	A match that was determined by comparing string literals associated with the subject and object of the match.	OMAPV:Match
-OMAPV:LogicalMatch	logical match	A match that was determined by comparing the subject and object of the match using a logical reasoner.	OMAPV:Match
