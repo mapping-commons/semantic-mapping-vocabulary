@@ -1,0 +1,20 @@
+{
+	"@context": {
+		"obo": "http://purl.obolibrary.org/obo/",
+		"oboInOwl": "http://www.geneontology.org/formats/oboInOwl#",
+
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"owl": "http://www.w3.org/2002/07/owl#",
+
+		"dc": "http://purl.org/dc/terms/",
+		"prov": "http://www.w3.org/ns/prov#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"cc": "http://creativecommons.org/ns#",
+		"schema": "http://schema.org/",
+
+		"terms": "http://purl.org/dc/terms/",
+		"sempav_voc": "https://w3id.org/semapv/vocab/",
+		"sempav": "https://w3id.org/semapv/"
+	}
+}
