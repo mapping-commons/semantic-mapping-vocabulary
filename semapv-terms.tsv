@@ -26,3 +26,4 @@ semapv:ThresholdFiltering	threshold filtering					semapv:MatchingPostProcessing
 semapv:StableMarriageFitering						semapv:MatchingPostProcessing
 semapv:CardinalityFiltering						semapv:MatchingPostProcessing
 semapv:LogicalConsistencyFiltering						semapv:MatchingPostProcessing
+semapv:EntityAlignmentMatching	An alignment based on entity matching (e.g., using knowledge graph embedding models)
