@@ -23,6 +23,6 @@ semapv:RegexRemoval	regex removal	A preprocessing method transforming a string b
 semapv:RegexReplacement	regex replacement	A preprocessing method transforming a string by matching a regular expression and then replacing that match with a specified substitution string.	The regex match “[ -]phenotype” is replaced by “-disease” for the label field of the subject entity in the mapping.			semapv:MatchingPreprocessing
 semapv:MatchingPostProcessing	matching process post-processing	A process applied to a set of mappings, usually with the intention of changing it.				semapv:MappingActivity
 semapv:ThresholdFiltering	threshold filtering					semapv:MatchingPostProcessing
-semapv:StableMarriageFiltering						semapv:MatchingPostProcessing
-semapv:CardinalityFiltering						semapv:MatchingPostProcessing
-semapv:LogicalConsistencyFiltering						semapv:MatchingPostProcessing
+semapv:StableMarriageFiltering	stable marriage filtering					semapv:MatchingPostProcessing
+semapv:CardinalityFiltering	cardinality filtering					semapv:MatchingPostProcessing
+semapv:LogicalConsistencyFiltering	logical consistency filtering					semapv:MatchingPostProcessing
