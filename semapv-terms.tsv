@@ -1,28 +1,48 @@
-IRI	skos:prefLabel	skos:definition	skos:example	rdfs:comment	altLabel	Parent
-ID	A skos:prefLabel	A skos:definition	A skos:example	A rdfs:comment	A skos:altLabel	SC %
-semapv:MappingActivity	mapping activity	A process that relates to the creation, confirmation, rejection or curation of a mapping.	Matching is a mapping activity that results in the creating of a mapping; mapping review is an activity that results in the confirmation of a mapping.			
-semapv:Matching	matching process	An process that results in a mapping between a subject and an object entity.	The label of a subject entity matches to an exact synonym of an object entity.		matching operation|matching task	semapv:MappingActivity
-semapv:Mapping	mapping	A triple <s,p,o> comprising a subject entity s, an object entity o and a mapping predicate p.	The subject entity NCI:C9305 is mapped to the object entity ICD10:C80.9 using the skos:relatedMatch mapping predicate.			
-semapv:LexicalMatching	lexical matching process	A matching process based on a lexical comparison between one or more syntactic features of the subject with one or more syntactic features of the object.	The label of a subject entity matches to an exact synonym of an object entity.			semapv:Matching
-semapv:LogicalReasoning	logical reasoning process	A matching process based on the inferences made by a logical reasoner.	Two classes across ontologies are determined equivalent by an OWL reasoner such as ELK.			semapv:Matching
-semapv:CompositeMatching	composite matching process	A matching process based on multiple, possibly intertwined, matching approaches.	An ontology matching tool determines that a subject should be mapped to an object by employing a range of techniques, including lexical, semantic and structural.			semapv:Matching
-semapv:UnspecifiedMatching	unspecified matching process	A matching process based on an unspecified comparison.	A mapping between a subject and an object was established, but it is no longer clear how or why.			semapv:Matching
-semapv:SemanticSimilarityThresholdMatching	semantic similarity threshold-based matching process	A matching process based on a minimum threshold of a score from a comparison based on a semantic similarity algorithm.	A match between a subject and an object entity was established because they had a Jaccard score higher than 0.8 based on the set of (common) superclasses.			semapv:Matching
-semapv:LexicalSimilarityThresholdMatching	lexical similarity threshold-based matching process	A lexical matching process based on a minimum threshold of a score from a comparison based on a lexical similarity algorithm.	A match between a subject and an object was established because they had a Levenshtein score higher than 0.8.			semapv:Matching
-semapv:StructuralMatching	structural matching process					semapv:Matching
-semapv:InstanceBasedMatching	instance-based matching process					semapv:Matching
-semapv:BackgroundKnowledgeBasedMatching	background knowledge-based matching process					semapv:Matching
-semapv:MappingChaining	mapping chaining-based matching process	A matching process based on the traversing of multiple mappings.	A match between a subject A and an object B was established because A was mapped to C, C was mapped to D and D was mapped to B.			semapv:Matching
-semapv:MappingReview	mapping review	A process that is concerned with determining if a mapping “candidate” (otherwise determined) is reasonable/correct.	A match between a subject A and an object B was established elsewhere, and a human reviewer determined that the mapping is true (or false) based on an independent evaluation.			semapv:MappingActivity
-semapv:ManualMappingCuration	manual mapping curation	An matching process that is performed by a human agent and is based on human judgement and domain knowledge.	A human curator determines that a subject should be mapped to an object by virtue of their domain expertise.			semapv:MappingActivity
-semapv:MatchingPreprocessing	matching process pre-processing	A preliminary processing of inputs prior to performing matching.				semapv:MappingActivity
-semapv:Stemming	stemming	The process of reducing a word to its word stem.				semapv:MatchingPreprocessing
-semapv:Lemmatization	lemmatization	The process of reducing the different forms of a word to one single form.				semapv:MatchingPreprocessing
-semapv:StopWordRemoval	stop-word removal	A preprocessing method transforming a string by removing a list of stop words.	The stop-words “of, and, is, a” are removed from the label field of the subject entity in the mapping.			semapv:MatchingPreprocessing
-semapv:RegexRemoval	regex removal	A preprocessing method transforming a string by matching a regular expression and then removing that match.	The regex match “[ -]phenotype” is removed from the label field of the subject entity in the mapping.			semapv:MatchingPreprocessing
-semapv:RegexReplacement	regex replacement	A preprocessing method transforming a string by matching a regular expression and then replacing that match with a specified substitution string.	The regex match “[ -]phenotype” is replaced by “-disease” for the label field of the subject entity in the mapping.			semapv:MatchingPreprocessing
-semapv:MatchingPostProcessing	matching process post-processing	A process applied to a set of mappings, usually with the intention of changing it.				semapv:MappingActivity
-semapv:ThresholdFiltering	threshold filtering					semapv:MatchingPostProcessing
-semapv:StableMarriageFiltering	stable marriage filtering					semapv:MatchingPostProcessing
-semapv:CardinalityFiltering	cardinality filtering					semapv:MatchingPostProcessing
-semapv:LogicalConsistencyFiltering	logical consistency filtering					semapv:MatchingPostProcessing
+IRI	skos:prefLabel	skos:definition	dc:source	skos:example	rdfs:comment	altLabel	Parent
+ID	A skos:prefLabel	A skos:definition	A dc:source	A skos:example	A rdfs:comment	A skos:altLabel	SC %
+semapv:MappingActivity	mapping activity	A process that relates to the creation, confirmation, rejection or curation of a mapping.		Matching is a mapping activity that results in the creating of a mapping; mapping review is an activity that results in the confirmation of a mapping.			
+semapv:Matching	matching process	An process that results in a mapping between a subject and an object entity.		The label of a subject entity matches to an exact synonym of an object entity.		matching operation|matching task	semapv:MappingActivity
+semapv:Mapping	mapping	A triple <s,p,o> comprising a subject entity s, an object entity o and a mapping predicate p.		The subject entity NCI:C9305 is mapped to the object entity ICD10:C80.9 using the skos:relatedMatch mapping predicate.			
+semapv:LexicalMatching	lexical matching process	A matching process based on a lexical comparison between one or more syntactic features of the subject with one or more syntactic features of the object.		The label of a subject entity matches to an exact synonym of an object entity.			semapv:Matching
+semapv:LogicalReasoning	logical reasoning process	A matching process based on the inferences made by a logical reasoner.		Two classes across ontologies are determined equivalent by an OWL reasoner such as ELK.			semapv:Matching
+semapv:CompositeMatching	composite matching process	A matching process based on multiple, possibly intertwined, matching approaches.		An ontology matching tool determines that a subject should be mapped to an object by employing a range of techniques, including lexical, semantic and structural.			semapv:Matching
+semapv:UnspecifiedMatching	unspecified matching process	A matching process based on an unspecified comparison.		A mapping between a subject and an object was established, but it is no longer clear how or why.			semapv:Matching
+semapv:SemanticSimilarityThresholdMatching	semantic similarity threshold-based matching process	A matching process based on a minimum threshold of a score from a comparison based on a semantic similarity algorithm.		A match between a subject and an object entity was established because they had a Jaccard score higher than 0.8 based on the set of (common) superclasses.			semapv:Matching
+semapv:LexicalSimilarityThresholdMatching	lexical similarity threshold-based matching process	A lexical matching process based on a minimum threshold of a score from a comparison based on a lexical similarity algorithm.		A match between a subject and an object was established because they had a Levenshtein score higher than 0.8.			semapv:Matching
+semapv:StructuralMatching	structural matching process						semapv:Matching
+semapv:InstanceBasedMatching	instance-based matching process						semapv:Matching
+semapv:BackgroundKnowledgeBasedMatching	background knowledge-based matching process						semapv:Matching
+semapv:MappingChaining	mapping chaining-based matching process	A matching process based on the traversing of multiple mappings.		A match between a subject A and an object B was established because A was mapped to C, C was mapped to D and D was mapped to B.			semapv:Matching
+semapv:MappingReview	mapping review	A process that is concerned with determining if a mapping “candidate” (otherwise determined) is reasonable/correct.		A match between a subject A and an object B was established elsewhere, and a human reviewer determined that the mapping is true (or false) based on an independent evaluation.			semapv:MappingActivity
+semapv:ManualMappingCuration	manual mapping curation	An matching process that is performed by a human agent and is based on human judgement and domain knowledge.		A human curator determines that a subject should be mapped to an object by virtue of their domain expertise.			semapv:MappingActivity
+semapv:MatchingPreprocessing	matching process pre-processing	A preliminary processing of inputs prior to performing matching.					semapv:MappingActivity
+semapv:Stemming	stemming	The process of reducing a word to its word stem.					semapv:Normalization
+semapv:Lemmatization	lemmatization	The process of reducing the different forms of a word to one single form.	https://doi.org/10.1007/978-3-642-38721-0				semapv:Normalization
+semapv:StopWordRemoval	stop-word removal	A preprocessing method transforming a string by removing a list of stop words.	https://doi.org/10.1007/978-3-642-38721-0	The stop-words “of, and, is, a” are removed from the label field of the subject entity in the mapping.			semapv:Normalization
+semapv:RegexRemoval	regex removal	A preprocessing method transforming a string by matching a regular expression and then removing that match.		The regex match “[ -]phenotype” is removed from the label field of the subject entity in the mapping.			semapv:Normalization
+semapv:RegexReplacement	regex replacement	A preprocessing method transforming a string by matching a regular expression and then replacing that match with a specified substitution string.		The regex match “[ -]phenotype” is replaced by “-disease” for the label field of the subject entity in the mapping.			semapv:Normalization
+semapv:MatchingPostProcessing	matching process post-processing	A process applied to a set of mappings, usually with the intention of changing it.					semapv:MappingActivity
+semapv:ThresholdFiltering	threshold filtering						semapv:MatchingPostProcessing
+semapv:StableMarriageFiltering	stable marriage filtering						semapv:MatchingPostProcessing
+semapv:CardinalityFiltering	cardinality filtering						semapv:MatchingPostProcessing
+semapv:LogicalConsistencyFiltering	logical consistency filtering						semapv:MatchingPostProcessing
+semapv:Normalization	normalization	A family of preprocessing techniques for reducing strings to be compared to a common format.	https://doi.org/10.1007/978-3-642-38721-0				semapv:MatchingPreprocessing
+semapv:CaseNormalization	case normalization	A normalization technique converting each alphabetic character in a string to their lower case counterpart.	https://doi.org/10.1007/978-3-642-38721-0	The string 'Ontology' is normalised to 'ontology' (lower case).			semapv:Normalization
+semapv:DiacriticsSuppression	diacritics suppression	A normalization technique replacing diactritic signs (e.g. accents, hats) with their most frequent replacements.	https://doi.org/10.1007/978-3-642-38721-0	The string 'Protégé' is normalised to 'Protege'.			semapv:Normalization
+semapv:BlankNormalisation	blank normalisation	A normalization technique replacing all blank characters, such as space, tabulation, carriage return (or sequences of these) into a single blank character.	https://doi.org/10.1007/978-3-642-38721-0	The string 'ontology  matching' (two spaces between 'ontology' and 'matching) becomes 'ontology matching' (one space).			semapv:Normalization
+semapv:LinkStripping	link stripping	A normalization technique replacing specific links between words, such as apostrophes, dashes, underscore, etc into dashes or blanks.	https://doi.org/10.1007/978-3-642-38721-0	The string 'alzheimer's' becomes 'alzheimers'.			semapv:Normalization
+semapv:DigitSuppression	digit suppression	A normalization technique removing all numbers in a string. 	https://doi.org/10.1007/978-3-642-38721-0	The string 'ontology1' becomes 'ontology'.			semapv:Normalization
+semapv:PunctuationElemination	punctuation elimination	A normalization technique removing all punctation characters from a string.	https://doi.org/10.1007/978-3-642-38721-0	The string 'e.g.' becomes 'eg'.			semapv:Normalization
+semapv:SimilarityMeasure	similarity measure	A technique for determining a score that characterises the similarity between two entities.	https://doi.org/10.1007/978-3-642-38721-0				
+semapv:StringBasedSimilarityMeasure	string-based similarity measure	A similarity measure based on the comparison of strings.	https://doi.org/10.1007/978-3-642-38721-0				semapv:SimilarityMeasure
+semapv:StringEquality	string equality	A string-based similarity measure which involves determining if two strings associated with mapping entities are equal.	https://doi.org/10.1007/978-3-642-38721-0				semapv:StringBasedSimilarityMeasure
+semapv:HammingDistance	hamming distance		https://doi.org/10.1007/978-3-642-38721-0				semapv:StringBasedSimilarityMeasure
+semapv:SubstringTest	substring test		https://doi.org/10.1007/978-3-642-38721-0				semapv:StringBasedSimilarityMeasure
+semapv:SubstringSimilarity	substring similarity		https://doi.org/10.1007/978-3-642-38721-0				semapv:StringBasedSimilarityMeasure
+semapv:nGramSimilarity	ngram similarity		https://doi.org/10.1007/978-3-642-38721-0				semapv:StringBasedSimilarityMeasure
+semapv:EditDistance	edit distance		https://doi.org/10.1007/978-3-642-38721-0				semapv:StringBasedSimilarityMeasure
+semapv:LevenshteinEditDistance	levenshtein distance		https://doi.org/10.1007/978-3-642-38721-0				semapv:EditDistance
+semapv:TokenBasedDistance	token-based distance		https://doi.org/10.1007/978-3-642-38721-0				semapv:StringBasedSimilarityMeasure
+semapv:LanguageBasedSimilarityMeasure	language-based similarity measure		https://doi.org/10.1007/978-3-642-38721-0				semapv:SimilarityMeasure
+semapv:Tokenization	tokenization		https://doi.org/10.1007/978-3-642-38721-0				semapv:Normalization
+semapv:TermExtraction	term extraction		https://doi.org/10.1007/978-3-642-38721-0			named entity recognition	semapv:Normalization
