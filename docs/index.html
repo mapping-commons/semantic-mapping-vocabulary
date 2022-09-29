@@ -348,6 +348,50 @@
             </tr>
           </table>
         </div>
+        <div class="property entity" id="blanknormalisation">
+          <h3>blank normalisation
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/BlankNormalisation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A normalization technique replacing all blank characters, such as space, tabulation, carriage return (or sequences of these) into a single blank character.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td><p>The string 'ontology  matching' (two spaces between 'ontology' and 'matching) becomes 'ontology matching' (one space).</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="cardinalityfiltering">
           <h3>cardinality filtering
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -366,6 +410,50 @@
               <td>
                 <span>
                   <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">sempav_voc:MatchingPostProcessing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="casenormalization">
+          <h3>case normalization
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/CaseNormalization</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A normalization technique converting each alphabetic character in a string to their lower case counterpart.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td><p>The string 'Ontology' is normalised to 'ontology' (lower case).</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -408,6 +496,169 @@
             </tr>
           </table>
         </div>
+        <div class="property entity" id="diacriticssuppression">
+          <h3>diacritics suppression
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/DiacriticsSuppression</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A normalization technique replacing diactritic signs (e.g. accents, hats) with their most frequent replacements.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td><p>The string 'Protégé' is normalised to 'Protege'.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="digitsuppression">
+          <h3>digit suppression
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/DigitSuppression</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A normalization technique removing all numbers in a string. </p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td><p>The string 'ontology1' becomes 'ontology'.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="editdistance">
+          <h3>edit distance
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/EditDistance</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">sempav_voc:StringBasedSimilarityMeasure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/LevenshteinEditDistance">sempav_voc:LevenshteinEditDistance</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hammingdistance">
+          <h3>hamming distance
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/HammingDistance</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">sempav_voc:StringBasedSimilarityMeasure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="instance-basedmatchingprocess">
           <h3>instance-based matching process
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -426,6 +677,38 @@
               <td>
                 <span>
                   <a href="https://w3id.org/semapv/vocab/Matching">sempav_voc:Matching</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="language-basedsimilaritymeasure">
+          <h3>language-based similarity measure
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/LanguageBasedSimilarityMeasure</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/SimilarityMeasure">sempav_voc:SimilarityMeasure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -451,11 +734,51 @@
             </tr>
             <tr>
               <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">sempav_voc:MatchingPreprocessing</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="levenshteindistance">
+          <h3>levenshtein distance
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/LevenshteinEditDistance</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/EditDistance">sempav_voc:EditDistance</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -528,6 +851,50 @@
               <td>
                 <span>
                   <a href="https://w3id.org/semapv/vocab/Matching">sempav_voc:Matching</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="linkstripping">
+          <h3>link stripping
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/LinkStripping</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A normalization technique replacing specific links between words, such as apostrophes, dashes, underscore, etc into dashes or blanks.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td><p>The string 'alzheimer's' becomes 'alzheimers'.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -992,10 +1359,95 @@
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
               </th>
               <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="normalization">
+          <h3>normalization
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/Normalization</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A family of preprocessing techniques for reducing strings to be compared to a common format.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">sempav_voc:MatchingPreprocessing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
                 <ul>
                   <li>
                     <span>
+                      <a href="https://w3id.org/semapv/vocab/BlankNormalisation">sempav_voc:BlankNormalisation</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/CaseNormalization">sempav_voc:CaseNormalization</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/DiacriticsSuppression">sempav_voc:DiacriticsSuppression</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/DigitSuppression">sempav_voc:DigitSuppression</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="https://w3id.org/semapv/vocab/Lemmatization">sempav_voc:Lemmatization</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/LinkStripping">sempav_voc:LinkStripping</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/PunctuationElemination">sempav_voc:PunctuationElemination</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1023,7 +1475,63 @@
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/TermExtraction">sempav_voc:TermExtraction</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/Tokenization">sempav_voc:Tokenization</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
                 </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="punctuationelimination">
+          <h3>punctuation elimination
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/PunctuationElemination</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A normalization technique removing all punctation characters from a string.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td><p>The string 'e.g.' becomes 'eg'.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -1057,7 +1565,7 @@
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">sempav_voc:MatchingPreprocessing</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1093,7 +1601,7 @@
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">sempav_voc:MatchingPreprocessing</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1132,6 +1640,54 @@
                   <a href="https://w3id.org/semapv/vocab/Matching">sempav_voc:Matching</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="similaritymeasure">
+          <h3>similarity measure
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/SimilarityMeasure</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A technique for determining a score that characterises the similarity between two entities.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/LanguageBasedSimilarityMeasure">sempav_voc:LanguageBasedSimilarityMeasure</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">sempav_voc:StringBasedSimilarityMeasure</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -1183,7 +1739,7 @@
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">sempav_voc:MatchingPreprocessing</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1215,11 +1771,146 @@
             </tr>
             <tr>
               <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">sempav_voc:MatchingPreprocessing</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="string-basedsimilaritymeasure">
+          <h3>string-based similarity measure
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A similarity measure based on the comparison of strings.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/SimilarityMeasure">sempav_voc:SimilarityMeasure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/EditDistance">sempav_voc:EditDistance</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/HammingDistance">sempav_voc:HammingDistance</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/StringEquality">sempav_voc:StringEquality</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/SubstringSimilarity">sempav_voc:SubstringSimilarity</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/SubstringTest">sempav_voc:SubstringTest</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/TokenBasedDistance">sempav_voc:TokenBasedDistance</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/nGramSimilarity">sempav_voc:nGramSimilarity</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="stringequality">
+          <h3>string equality
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/StringEquality</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A string-based similarity measure which involves determining if two strings associated with mapping entities are equal.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">sempav_voc:StringBasedSimilarityMeasure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1250,6 +1941,102 @@
             </tr>
           </table>
         </div>
+        <div class="property entity" id="substringsimilarity">
+          <h3>substring similarity
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/SubstringSimilarity</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">sempav_voc:StringBasedSimilarityMeasure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="substringtest">
+          <h3>substring test
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/SubstringTest</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">sempav_voc:StringBasedSimilarityMeasure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="termextraction">
+          <h3>term extraction
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/TermExtraction</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="thresholdfiltering">
           <h3>threshold filtering
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -1268,6 +2055,70 @@
               <td>
                 <span>
                   <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">sempav_voc:MatchingPostProcessing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="token-baseddistance">
+          <h3>token-based distance
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/TokenBasedDistance</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">sempav_voc:StringBasedSimilarityMeasure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="tokenization">
+          <h3>tokenization
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/Tokenization</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">sempav_voc:Normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1310,6 +2161,38 @@
             </tr>
           </table>
         </div>
+        <div class="property entity" id="ngramsimilarity">
+          <h3>ngram similarity
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/nGramSimilarity</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="None. Defined in None">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns1:978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">sempav_voc:StringBasedSimilarityMeasure</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="section" id="annotationproperties">
         <h2>Annotation Properties</h2>
@@ -1335,6 +2218,19 @@
               <th>IRI</th>
               <td>
                 <code>http://purl.org/dc/terms/license</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="source">
+          <h3>source
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/terms/source</code>
               </td>
             </tr>
           </table>
@@ -1412,6 +2308,10 @@
           <dd>
             <code>http://purl.org/dc/terms/</code>
           </dd>
+          <dt id="ns1">ns1</dt>
+          <dd>
+            <code>https://doi.org/10.1007/</code>
+          </dd>
           <dt id="owl">owl</dt>
           <dd>
             <code>http://www.w3.org/2002/07/owl#</code>
@@ -1483,22 +2383,49 @@
               <a href="#backgroundknowledge-basedmatchingprocess">background knowledge-based matching process</a>
             </li>
             <li>
+              <a href="#blanknormalisation">blank normalisation</a>
+            </li>
+            <li>
               <a href="#cardinalityfiltering">cardinality filtering</a>
+            </li>
+            <li>
+              <a href="#casenormalization">case normalization</a>
             </li>
             <li>
               <a href="#compositematchingprocess">composite matching process</a>
             </li>
             <li>
+              <a href="#diacriticssuppression">diacritics suppression</a>
+            </li>
+            <li>
+              <a href="#digitsuppression">digit suppression</a>
+            </li>
+            <li>
+              <a href="#editdistance">edit distance</a>
+            </li>
+            <li>
+              <a href="#hammingdistance">hamming distance</a>
+            </li>
+            <li>
               <a href="#instance-basedmatchingprocess">instance-based matching process</a>
             </li>
             <li>
+              <a href="#language-basedsimilaritymeasure">language-based similarity measure</a>
+            </li>
+            <li>
               <a href="#lemmatization">lemmatization</a>
+            </li>
+            <li>
+              <a href="#levenshteindistance">levenshtein distance</a>
             </li>
             <li>
               <a href="#lexicalmatchingprocess">lexical matching process</a>
             </li>
             <li>
               <a href="#lexicalsimilaritythreshold-basedmatchingprocess">lexical similarity threshold-based matching process</a>
+            </li>
+            <li>
+              <a href="#linkstripping">link stripping</a>
             </li>
             <li>
               <a href="#logicalconsistencyfiltering">logical consistency filtering</a>
@@ -1531,6 +2458,12 @@
               <a href="#matchingprocesspre-processing">matching process pre-processing</a>
             </li>
             <li>
+              <a href="#normalization">normalization</a>
+            </li>
+            <li>
+              <a href="#punctuationelimination">punctuation elimination</a>
+            </li>
+            <li>
               <a href="#regexremoval">regex removal</a>
             </li>
             <li>
@@ -1538,6 +2471,9 @@
             </li>
             <li>
               <a href="#semanticsimilaritythreshold-basedmatchingprocess">semantic similarity threshold-based matching process</a>
+            </li>
+            <li>
+              <a href="#similaritymeasure">similarity measure</a>
             </li>
             <li>
               <a href="#stablemarriagefiltering">stable marriage filtering</a>
@@ -1549,13 +2485,37 @@
               <a href="#stop-wordremoval">stop-word removal</a>
             </li>
             <li>
+              <a href="#string-basedsimilaritymeasure">string-based similarity measure</a>
+            </li>
+            <li>
+              <a href="#stringequality">string equality</a>
+            </li>
+            <li>
               <a href="#structuralmatchingprocess">structural matching process</a>
+            </li>
+            <li>
+              <a href="#substringsimilarity">substring similarity</a>
+            </li>
+            <li>
+              <a href="#substringtest">substring test</a>
+            </li>
+            <li>
+              <a href="#termextraction">term extraction</a>
             </li>
             <li>
               <a href="#thresholdfiltering">threshold filtering</a>
             </li>
             <li>
+              <a href="#token-baseddistance">token-based distance</a>
+            </li>
+            <li>
+              <a href="#tokenization">tokenization</a>
+            </li>
+            <li>
               <a href="#unspecifiedmatchingprocess">unspecified matching process</a>
+            </li>
+            <li>
+              <a href="#ngramsimilarity">ngram similarity</a>
             </li>
           </ul>
         </li>
@@ -1569,6 +2529,9 @@
             </li>
             <li>
               <a href="#license">license</a>
+            </li>
+            <li>
+              <a href="#source">source</a>
             </li>
             <li>
               <a href="#title">title</a>
@@ -1594,6 +2557,9 @@
           <ul class="second">
             <li>
               <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#ns1">ns1</a>
             </li>
             <li>
               <a href="#owl">owl</a>
