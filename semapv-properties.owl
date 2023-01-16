@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/semapv/vocab#"
+     xml:base="http://w3id.org/semapv/vocab"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/semapv/vocab"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/nonIsomorphicMatch"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the object is a broader concept than the subject.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">broad match</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject and object are sufficiently similar that they can be used interchangeably in some information retrieval applications.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">close match</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/isomorphicMatch"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject and object are sufficiently similar, with a high degree of confidence, that they can be used interchangeably across a wide range of information retrieval applications.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exact match</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#mappingRelation -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#mappingRelation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mapping (alignment) link between two concepts.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping relation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/nonIsomorphicMatch"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the object is a narrower concept that the subject.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">narrow match</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/nonIsomorphicMatch"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject and the object are inherently related, but where none is in any way more general than the other.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">related match</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#semanticRelation -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#semanticRelation">
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A link between two concepts.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semantic relation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/semapv/vocab/crossSpeciesBroadMatch -->
+
+    <owl:Class rdf:about="https://w3id.org/semapv/vocab/crossSpeciesBroadMatch">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject is considered analogous to the subject in a different taxonomic grouping, but the object refers to a broader concept.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBbt:00007091 (D. melanogaster “subperineurial glial sheath”) and UBERON:0000202 (taxon-neutral “glial blood brain barrier”) are a cross-species broad match.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross-species broad match</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/semapv/vocab/crossSpeciesExactMatch -->
+
+    <owl:Class rdf:about="https://w3id.org/semapv/vocab/crossSpeciesExactMatch">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/isomorphicMatch"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject is considered analogous to the object in a different taxonomic grouping.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBbt:00005074 (D. melanogaster “muscle cell”) and CL:0000187 (taxon-neutral “muscle cell”) are a cross-species exact match.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross-species exact match</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/semapv/vocab/crossSpeciesNarrowMatch -->
+
+    <owl:Class rdf:about="https://w3id.org/semapv/vocab/crossSpeciesNarrowMatch">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject is considered analogous to the subject in a different taxonomic grouping, but the object refers to a narrower concept.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross-species narrow match</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/semapv/vocab/isomorphicMatch -->
+
+    <owl:Class rdf:about="https://w3id.org/semapv/vocab/isomorphicMatch">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject is isomorphic to the object, i.e. considered of identical or similar form, shape, or structure.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isomorphic match</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/semapv/vocab/nonIsomorphicMatch -->
+
+    <owl:Class rdf:about="https://w3id.org/semapv/vocab/nonIsomorphicMatch">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject cannot be considered isomorphic to the object, i.e. considered of identical or similar form, shape, or structure. The object corresponds to exactly one subject in the subject_source.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non-isomorphic match</skos:prefLabel>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+
