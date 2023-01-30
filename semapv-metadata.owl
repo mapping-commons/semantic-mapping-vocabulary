@@ -12,7 +12,7 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 Ontology(<https://w3id.org/semapv/semapv.owl>
 
 Annotation(dcterms:description "The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.")
-Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
+Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "Semantic Mapping Vocabulary")
 
 Declaration(AnnotationProperty(dcterms:description))
