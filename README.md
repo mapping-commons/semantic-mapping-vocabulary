@@ -2,7 +2,9 @@
 
 The Semantic Mapping Vocabulary (SEMAPV) is a vocabulary about the processes, entities and agents involved in the curation of mappings. It is being developed in conjunction with the [Simple Standard for Sharing Ontology Mappings (SSSOM)](https://mapping-commons.github.io/sssom/spec/), providing a detailed vocabulary to describe, for example, different kinds of matching processes (lexical, logical, etc), as well as pre- and post-processing techniques employed.
 
-**SEMAPV is currently in pre-Alpha state and is guaranteed to change, do not use in production.**
+To cite: http://doi.org/10.5281/zenodo.7672104
+
+**SEMAPV is currently in beta state and is likely still undergoing changes.**
 
 ### Core editorial Team
 
