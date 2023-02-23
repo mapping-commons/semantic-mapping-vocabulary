@@ -17,7 +17,7 @@
      xmlns:sempav_voc="https://w3id.org/semapv/vocab/">
     <owl:Ontology rdf:about="https://w3id.org/semapv/semapv.owl">
         <terms:description>The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.</terms:description>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <terms:title>Semantic Mapping Vocabulary</terms:title>
     </owl:Ontology>
     
@@ -239,6 +239,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/BackgroundKnowledgeBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
+        <terms:source rdf:resource="https://doi.org/10.1016/j.websem.2018.04.001"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process that exploits background knowledge from external resources, commonly referred to as background knowledge resources. This approach is also known as indirect matching, BK-based matching or context-based matching.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject A and an object B was established because they appear equivalent under consideration of externally provided background knowledge.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">background knowledge-based matching process</skos:prefLabel>
     </owl:Class>
     
@@ -248,7 +251,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/BlankNormalisation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique replacing all blank characters, such as space, tabulation, carriage return (or sequences of these) into a single blank character.</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;ontology  matching&apos; (two spaces between &apos;ontology&apos; and &apos;matching) becomes &apos;ontology matching&apos; (one space).</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blank normalisation</skos:prefLabel>
@@ -269,7 +272,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/CaseNormalization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique converting each alphabetic character in a string to their lower case counterpart.</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;Ontology&apos; is normalised to &apos;ontology&apos; (lower case).</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">case normalization</skos:prefLabel>
@@ -292,7 +295,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/DiacriticsSuppression">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique replacing diactritic signs (e.g. accents, hats) with their most frequent replacements.</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;Protégé&apos; is normalised to &apos;Protege&apos;.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diacritics suppression</skos:prefLabel>
@@ -304,7 +307,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/DigitSuppression">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique removing all numbers in a string. </skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;ontology1&apos; becomes &apos;ontology&apos;.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digit suppression</skos:prefLabel>
@@ -316,7 +319,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/EditDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edit distance</skos:prefLabel>
     </owl:Class>
     
@@ -326,7 +329,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/HammingDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hamming distance</skos:prefLabel>
     </owl:Class>
     
@@ -336,6 +339,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/InstanceBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on individual representations (or instances).</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject A and an object B was established because they share the same instances.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">instance-based matching process</skos:prefLabel>
     </owl:Class>
     
@@ -345,7 +351,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LanguageBasedSimilarityMeasure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/SimilarityMeasure"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language-based similarity measure</skos:prefLabel>
     </owl:Class>
     
@@ -355,7 +361,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Lemmatization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process of reducing the different forms of a word to one single form.</skos:definition>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lemmatization</skos:prefLabel>
     </owl:Class>
@@ -366,7 +372,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LevenshteinEditDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/EditDistance"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">levenshtein distance</skos:prefLabel>
     </owl:Class>
     
@@ -398,7 +404,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LinkStripping">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique replacing specific links between words, such as apostrophes, dashes, underscore, etc into dashes or blanks.</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;alzheimer&apos;s&apos; becomes &apos;alzheimers&apos;.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link stripping</skos:prefLabel>
@@ -483,8 +489,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Matching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MappingActivity"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching operation</skos:altLabel>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching task</skos:altLabel>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching operation|matching task</skos:altLabel>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An process that results in a mapping between a subject and an object entity.</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The label of a subject entity matches to an exact synonym of an object entity.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching process</skos:prefLabel>
@@ -516,7 +521,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Normalization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MatchingPreprocessing"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A family of preprocessing techniques for reducing strings to be compared to a common format.</skos:definition>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normalization</skos:prefLabel>
     </owl:Class>
@@ -527,7 +532,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/PunctuationElemination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique removing all punctation characters from a string.</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;e.g.&apos; becomes &apos;eg&apos;.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">punctuation elimination</skos:prefLabel>
@@ -571,7 +576,7 @@
     <!-- https://w3id.org/semapv/vocab/SimilarityMeasure -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/SimilarityMeasure">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A technique for determining a score that characterises the similarity between two entities.</skos:definition>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">similarity measure</skos:prefLabel>
     </owl:Class>
@@ -601,7 +606,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/StopWordRemoval">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A preprocessing method transforming a string by removing a list of stop words.</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The stop-words “of, and, is, a” are removed from the label field of the subject entity in the mapping.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stop-word removal</skos:prefLabel>
@@ -613,7 +618,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/SimilarityMeasure"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A similarity measure based on the comparison of strings.</skos:definition>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string-based similarity measure</skos:prefLabel>
     </owl:Class>
@@ -624,7 +629,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/StringEquality">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string-based similarity measure which involves determining if two strings associated with mapping entities are equal.</skos:definition>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string equality</skos:prefLabel>
     </owl:Class>
@@ -644,7 +649,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/SubstringSimilarity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">substring similarity</skos:prefLabel>
     </owl:Class>
     
@@ -654,7 +659,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/SubstringTest">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">substring test</skos:prefLabel>
     </owl:Class>
     
@@ -664,7 +669,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/TermExtraction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">named entity recognition</skos:altLabel>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">term extraction</skos:prefLabel>
     </owl:Class>
@@ -684,7 +689,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/TokenBasedDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">token-based distance</skos:prefLabel>
     </owl:Class>
     
@@ -694,7 +699,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Tokenization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tokenization</skos:prefLabel>
     </owl:Class>
     
@@ -715,7 +720,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/nGramSimilarity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-38721-0</terms:source>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ngram similarity</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>

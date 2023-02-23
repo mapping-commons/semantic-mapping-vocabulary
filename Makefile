@@ -20,4 +20,12 @@ semapv.owl: semapv-metadata.owl semapv-terms.owl semapv-properties.owl context.j
 	$(ROBOT) merge -i semapv-metadata.owl --add-prefixes context.jsonld -i semapv-terms.owl -i semapv-properties.owl -o $@
 
 docs/index.html: semapv.owl
-	pylode $< -o $@
+	python -m pylode $< -o $@
+
+.PHONY: help
+help:
+	@echo "$$data"
+	@echo "----------------------------------------"
+	@echo "	Command reference: semapv"
+	@echo "----------------------------------------"
+	@echo "all: build docs and semapv vocabulary"
