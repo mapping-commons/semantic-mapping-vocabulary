@@ -8,6 +8,7 @@
 		"owl": "http://www.w3.org/2002/07/owl#",
 
 		"dc": "http://purl.org/dc/terms/",
+		"doi": "https://doi.org/",
 		"prov": "http://www.w3.org/ns/prov#",
 		"skos": "http://www.w3.org/2004/02/skos/core#",
 		"cc": "http://creativecommons.org/ns#",

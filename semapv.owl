@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/semapv/semapv.owl#"
-     xml:base="https://w3id.org/semapv/semapv.owl"
+<rdf:RDF xmlns="http://w3id.org/semapv/vocab/semapv.owl#"
+     xml:base="http://w3id.org/semapv/vocab/semapv.owl"
      xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:doi="https://doi.org/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -15,7 +16,8 @@
      xmlns:sempav="https://w3id.org/semapv/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:sempav_voc="https://w3id.org/semapv/vocab/">
-    <owl:Ontology rdf:about="https://w3id.org/semapv/semapv.owl">
+    <owl:Ontology rdf:about="http://w3id.org/semapv/vocab/semapv.owl">
+        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2023-02-23/semapv.owl"/>
         <terms:description>The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <terms:title>Semantic Mapping Vocabulary</terms:title>
