@@ -437,7 +437,7 @@
     <!-- https://w3id.org/semapv/vocab/ManualMappingCuration -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/ManualMappingCuration">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MappingActivity"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An matching process that is performed by a human agent and is based on human judgement and domain knowledge.</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A human curator determines that a subject should be mapped to an object by virtue of their domain expertise.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual mapping curation</skos:prefLabel>
