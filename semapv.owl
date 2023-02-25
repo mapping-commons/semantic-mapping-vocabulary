@@ -17,7 +17,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:sempav_voc="https://w3id.org/semapv/vocab/">
     <owl:Ontology rdf:about="http://w3id.org/semapv/vocab/semapv.owl">
-        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2023-02-23/semapv.owl"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2023-02-25/semapv.owl"/>
         <terms:description>The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <terms:title>Semantic Mapping Vocabulary</terms:title>
@@ -642,6 +642,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/StructuralMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
+        <terms:source rdf:resource="https://doi.org/10.1016/j.websem.2009.11.002"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structural matching does not involve looking at &quot;values&quot; of properties.</rdfs:comment>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject and an object was established because of the similarity of their structural features, e.g., the number of direct property of a class.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">structural matching process</skos:prefLabel>
     </owl:Class>
     
