@@ -17,7 +17,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:sempav_voc="https://w3id.org/semapv/vocab/">
     <owl:Ontology rdf:about="http://w3id.org/semapv/vocab/semapv.owl">
-        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2023-02-25/semapv.owl"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2023-02-27/semapv.owl"/>
         <terms:description>The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <terms:title>Semantic Mapping Vocabulary</terms:title>
