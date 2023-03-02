@@ -305,17 +305,18 @@
     
 
 
-    <!-- https://w3id.org/semapv/vocab/MappingFlipping -->
+    <!-- https://w3id.org/semapv/vocab/MappingInversion -->
 
-    <owl:Class rdf:about="https://w3id.org/semapv/vocab/MappingFlipping">
+    <owl:Class rdf:about="https://w3id.org/semapv/vocab/MappingInversion">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
         <terms:source rdf:resource="https://mapping-commons.github.io/sssom/chaining_rules/"/>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping flipping</skos:altLabel>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping inversion</skos:altLabel>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping inverting</skos:altLabel>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semantic walk-backs</skos:altLabel>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on the reversing or flipping of the subject with the object of a mapping in accordance with the semantics of the mapping predicate.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject A and an object B was established because B was mapped to A.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping flipping-based matching process</skos:prefLabel>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on the inverting or flipping of the subject with the object of a mapping in accordance with the semantics of the mapping predicate.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A broad match between a subject A and an object B using the skos:narrowMatch mapping relation was established because B was mapped to A using the skos:broadMatch mapping relation.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping inversion-based matching process</skos:prefLabel>
     </owl:Class>
     
 
