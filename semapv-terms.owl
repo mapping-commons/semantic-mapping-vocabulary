@@ -9,7 +9,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/semapv/vocab/semapv-terms.owl">
-        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2023-02-27/semapv-terms.owl"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2023-03-02/semapv-terms.owl"/>
     </owl:Ontology>
     
 
@@ -305,6 +305,22 @@
     
 
 
+    <!-- https://w3id.org/semapv/vocab/MappingInversion -->
+
+    <owl:Class rdf:about="https://w3id.org/semapv/vocab/MappingInversion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
+        <terms:source rdf:resource="https://mapping-commons.github.io/sssom/chaining_rules/"/>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping flipping</skos:altLabel>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping inversion</skos:altLabel>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping inverting</skos:altLabel>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semantic walk-backs</skos:altLabel>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on the inverting or flipping of the subject with the object of a mapping in accordance with the semantics of the mapping predicate.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A broad match between a subject A and an object B using the skos:narrowMatch mapping relation was established because B was mapped to A using the skos:broadMatch mapping relation.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping inversion-based matching process</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/semapv/vocab/MappingReview -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/MappingReview">
@@ -320,7 +336,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Matching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MappingActivity"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching operation|matching task</skos:altLabel>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching operation</skos:altLabel>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching task</skos:altLabel>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An process that results in a mapping between a subject and an object entity.</skos:definition>
         <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The label of a subject entity matches to an exact synonym of an object entity.</skos:example>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching process</skos:prefLabel>
