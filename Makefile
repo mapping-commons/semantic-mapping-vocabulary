@@ -23,7 +23,7 @@ semapv.owl: semapv-metadata.owl semapv-terms.owl semapv-properties.owl context.j
 	merge --add-prefixes context.jsonld -o $@
 
 docs/index.html: semapv.owl
-	pip install pylode
+	pip install pylode --break-system-packages
 	python -m pylode $< -o $@
 
 .PHONY: help
