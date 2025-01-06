@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://w3id.org/semapv/vocab/semapv.owl#"
      xml:base="http://w3id.org/semapv/vocab/semapv.owl"
      xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:doi="https://doi.org/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,16 +12,16 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/"
-     xmlns:sempav="https://w3id.org/semapv/"
+     xmlns:semapv="https://w3id.org/semapv/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:sempav_voc="https://w3id.org/semapv/vocab/">
+     xmlns:semapv_voc="https://w3id.org/semapv/vocab/">
     <owl:Ontology rdf:about="http://w3id.org/semapv/vocab/semapv.owl">
-        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2023-03-02/semapv.owl"/>
-        <terms:description>The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.</terms:description>
-        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-        <terms:title>Semantic Mapping Vocabulary</terms:title>
+        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2025-01-06/semapv.owl"/>
+        <dcterms:description>The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dcterms:title>Semantic Mapping Vocabulary</dcterms:title>
     </owl:Ontology>
     
 
@@ -69,10 +70,10 @@
     <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the object is a broader concept than the subject.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">broad match</skos:prefLabel>
+        <dcterms:source>https://www.w3.org/TR/skos-reference/</dcterms:source>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
+        <skos:definition>A match where the object is a broader concept than the subject.</skos:definition>
+        <skos:prefLabel>broad match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/semapv/vocab/nonIsomorphicMatch"/>
     </owl:AnnotationProperty>
     
@@ -81,10 +82,10 @@
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject and object are sufficiently similar that they can be used interchangeably in some information retrieval applications.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">close match</skos:prefLabel>
+        <dcterms:source>https://www.w3.org/TR/skos-reference/</dcterms:source>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
+        <skos:definition>A match where the subject and object are sufficiently similar that they can be used interchangeably in some information retrieval applications.</skos:definition>
+        <skos:prefLabel>close match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
     </owl:AnnotationProperty>
     
@@ -99,10 +100,10 @@
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject and object are sufficiently similar, with a high degree of confidence, that they can be used interchangeably across a wide range of information retrieval applications.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exact match</skos:prefLabel>
+        <dcterms:source>https://www.w3.org/TR/skos-reference/</dcterms:source>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
+        <skos:definition>A match where the subject and object are sufficiently similar, with a high degree of confidence, that they can be used interchangeably across a wide range of information retrieval applications.</skos:definition>
+        <skos:prefLabel>exact match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/semapv/vocab/isomorphicMatch"/>
     </owl:AnnotationProperty>
@@ -118,10 +119,10 @@
     <!-- http://www.w3.org/2004/02/skos/core#mappingRelation -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#mappingRelation">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mapping (alignment) link between two concepts.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping relation</skos:prefLabel>
+        <dcterms:source>https://www.w3.org/TR/skos-reference/</dcterms:source>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
+        <skos:definition>A mapping (alignment) link between two concepts.</skos:definition>
+        <skos:prefLabel>mapping relation</skos:prefLabel>
     </owl:AnnotationProperty>
     
 
@@ -129,10 +130,10 @@
     <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the object is a narrower concept that the subject.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">narrow match</skos:prefLabel>
+        <dcterms:source>https://www.w3.org/TR/skos-reference/</dcterms:source>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
+        <skos:definition>A match where the object is a narrower concept that the subject.</skos:definition>
+        <skos:prefLabel>narrow match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/semapv/vocab/nonIsomorphicMatch"/>
     </owl:AnnotationProperty>
     
@@ -147,10 +148,10 @@
     <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3.org/TR/skos-reference/</terms:source>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject and the object are inherently related, but where none is in any way more general than the other.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">related match</skos:prefLabel>
+        <dcterms:source>https://www.w3.org/TR/skos-reference/</dcterms:source>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
+        <skos:definition>A match where the subject and the object are inherently related, but where none is in any way more general than the other.</skos:definition>
+        <skos:prefLabel>related match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/semapv/vocab/nonIsomorphicMatch"/>
     </owl:AnnotationProperty>
     
@@ -159,10 +160,10 @@
     <!-- https://w3id.org/semapv/vocab/crossSpeciesBroadMatch -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/semapv/vocab/crossSpeciesBroadMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject is considered analogous to the subject in a different taxonomic grouping, but the object refers to a broader concept.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBbt:00007091 (D. melanogaster “subperineurial glial sheath”) and UBERON:0000202 (taxon-neutral “glial blood brain barrier”) are a cross-species broad match.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross-species broad match</skos:prefLabel>
+        <dcterms:source>https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</dcterms:source>
+        <skos:definition>A match where the subject is considered analogous to the subject in a different taxonomic grouping, but the object refers to a broader concept.</skos:definition>
+        <skos:example>FBbt:00007091 (D. melanogaster “subperineurial glial sheath”) and UBERON:0000202 (taxon-neutral “glial blood brain barrier”) are a cross-species broad match.</skos:example>
+        <skos:prefLabel>cross-species broad match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broadMatch"/>
     </owl:AnnotationProperty>
     
@@ -171,9 +172,9 @@
     <!-- https://w3id.org/semapv/vocab/crossSpeciesCloseMatch -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/semapv/vocab/crossSpeciesCloseMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject and the object belong in different taxonomic groupings, but refer to concepts similar enough that they can be used interchangeably.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross-species close match</skos:prefLabel>
+        <dcterms:source>https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</dcterms:source>
+        <skos:definition>A match where the subject and the object belong in different taxonomic groupings, but refer to concepts similar enough that they can be used interchangeably.</skos:definition>
+        <skos:prefLabel>cross-species close match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/semapv/vocab/nonIsomorphicMatch"/>
     </owl:AnnotationProperty>
@@ -183,10 +184,10 @@
     <!-- https://w3id.org/semapv/vocab/crossSpeciesExactMatch -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/semapv/vocab/crossSpeciesExactMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject is considered analogous to the object in a different taxonomic grouping.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBbt:00005074 (D. melanogaster “muscle cell”) and CL:0000187 (taxon-neutral “muscle cell”) are a cross-species exact match.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross-species exact match</skos:prefLabel>
+        <dcterms:source>https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</dcterms:source>
+        <skos:definition>A match where the subject is considered analogous to the object in a different taxonomic grouping.</skos:definition>
+        <skos:example>FBbt:00005074 (D. melanogaster “muscle cell”) and CL:0000187 (taxon-neutral “muscle cell”) are a cross-species exact match.</skos:example>
+        <skos:prefLabel>cross-species exact match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/semapv/vocab/isomorphicMatch"/>
     </owl:AnnotationProperty>
@@ -196,9 +197,9 @@
     <!-- https://w3id.org/semapv/vocab/crossSpeciesNarrowMatch -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/semapv/vocab/crossSpeciesNarrowMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject is considered analogous to the subject in a different taxonomic grouping, but the object refers to a narrower concept.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross-species narrow match</skos:prefLabel>
+        <dcterms:source>https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</dcterms:source>
+        <skos:definition>A match where the subject is considered analogous to the subject in a different taxonomic grouping, but the object refers to a narrower concept.</skos:definition>
+        <skos:prefLabel>cross-species narrow match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
     </owl:AnnotationProperty>
     
@@ -207,9 +208,9 @@
     <!-- https://w3id.org/semapv/vocab/isomorphicMatch -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/semapv/vocab/isomorphicMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject is isomorphic to the object, i.e. considered of identical or similar form, shape, or structure.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isomorphic match</skos:prefLabel>
+        <dcterms:source>https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</dcterms:source>
+        <skos:definition>A match where the subject is isomorphic to the object, i.e. considered of identical or similar form, shape, or structure.</skos:definition>
+        <skos:prefLabel>isomorphic match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
     </owl:AnnotationProperty>
     
@@ -218,9 +219,9 @@
     <!-- https://w3id.org/semapv/vocab/nonIsomorphicMatch -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/semapv/vocab/nonIsomorphicMatch">
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</terms:source>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match where the subject cannot be considered isomorphic to the object, i.e. considered of identical or similar form, shape, or structure. The object corresponds to exactly one subject in the subject_source.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non-isomorphic match</skos:prefLabel>
+        <dcterms:source>https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</dcterms:source>
+        <skos:definition>A match where the subject cannot be considered isomorphic to the object, i.e. considered of identical or similar form, shape, or structure. The object corresponds to exactly one subject in the subject_source.</skos:definition>
+        <skos:prefLabel>non-isomorphic match</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
     </owl:AnnotationProperty>
     
@@ -241,10 +242,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/BackgroundKnowledgeBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <terms:source rdf:resource="https://doi.org/10.1016/j.websem.2018.04.001"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process that exploits background knowledge from external resources, commonly referred to as background knowledge resources. This approach is also known as indirect matching, BK-based matching or context-based matching.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject A and an object B was established because they appear equivalent under consideration of externally provided background knowledge.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">background knowledge-based matching process</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1016/j.websem.2018.04.001"/>
+        <skos:definition>A matching process that exploits background knowledge from external resources, commonly referred to as background knowledge resources. This approach is also known as indirect matching, BK-based matching or context-based matching.</skos:definition>
+        <skos:example>A match between a subject A and an object B was established because they appear equivalent under consideration of externally provided background knowledge.</skos:example>
+        <skos:prefLabel>background knowledge-based matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -253,10 +254,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/BlankNormalisation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique replacing all blank characters, such as space, tabulation, carriage return (or sequences of these) into a single blank character.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;ontology  matching&apos; (two spaces between &apos;ontology&apos; and &apos;matching) becomes &apos;ontology matching&apos; (one space).</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blank normalisation</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A normalization technique replacing all blank characters, such as space, tabulation, carriage return (or sequences of these) into a single blank character.</skos:definition>
+        <skos:example>The string &apos;ontology  matching&apos; (two spaces between &apos;ontology&apos; and &apos;matching) becomes &apos;ontology matching&apos; (one space).</skos:example>
+        <skos:prefLabel>blank normalisation</skos:prefLabel>
     </owl:Class>
     
 
@@ -265,7 +266,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/CardinalityFiltering">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MatchingPostProcessing"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardinality filtering</skos:prefLabel>
+        <skos:prefLabel>cardinality filtering</skos:prefLabel>
     </owl:Class>
     
 
@@ -274,10 +275,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/CaseNormalization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique converting each alphabetic character in a string to their lower case counterpart.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;Ontology&apos; is normalised to &apos;ontology&apos; (lower case).</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">case normalization</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A normalization technique converting each alphabetic character in a string to their lower case counterpart.</skos:definition>
+        <skos:example>The string &apos;Ontology&apos; is normalised to &apos;ontology&apos; (lower case).</skos:example>
+        <skos:prefLabel>case normalization</skos:prefLabel>
     </owl:Class>
     
 
@@ -286,9 +287,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/CompositeMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on multiple, possibly intertwined, matching approaches.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology matching tool determines that a subject should be mapped to an object by employing a range of techniques, including lexical, semantic and structural.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">composite matching process</skos:prefLabel>
+        <skos:definition>A matching process based on multiple, possibly intertwined, matching approaches.</skos:definition>
+        <skos:example>An ontology matching tool determines that a subject should be mapped to an object by employing a range of techniques, including lexical, semantic and structural.</skos:example>
+        <skos:prefLabel>composite matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -297,10 +298,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/DiacriticsSuppression">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique replacing diactritic signs (e.g. accents, hats) with their most frequent replacements.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;Protégé&apos; is normalised to &apos;Protege&apos;.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diacritics suppression</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A normalization technique replacing diactritic signs (e.g. accents, hats) with their most frequent replacements.</skos:definition>
+        <skos:example>The string &apos;Protégé&apos; is normalised to &apos;Protege&apos;.</skos:example>
+        <skos:prefLabel>diacritics suppression</skos:prefLabel>
     </owl:Class>
     
 
@@ -309,10 +310,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/DigitSuppression">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique removing all numbers in a string. </skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;ontology1&apos; becomes &apos;ontology&apos;.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digit suppression</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A normalization technique removing all numbers in a string. </skos:definition>
+        <skos:example>The string &apos;ontology1&apos; becomes &apos;ontology&apos;.</skos:example>
+        <skos:prefLabel>digit suppression</skos:prefLabel>
     </owl:Class>
     
 
@@ -321,8 +322,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/EditDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edit distance</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:prefLabel>edit distance</skos:prefLabel>
     </owl:Class>
     
 
@@ -331,8 +332,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/HammingDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hamming distance</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:prefLabel>hamming distance</skos:prefLabel>
     </owl:Class>
     
 
@@ -341,10 +342,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/InstanceBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on individual representations (or instances).</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject A and an object B was established because they share the same instances.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">instance-based matching process</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A matching process based on individual representations (or instances).</skos:definition>
+        <skos:example>A match between a subject A and an object B was established because they share the same instances.</skos:example>
+        <skos:prefLabel>instance-based matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -353,8 +354,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LanguageBasedSimilarityMeasure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/SimilarityMeasure"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language-based similarity measure</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:prefLabel>language-based similarity measure</skos:prefLabel>
     </owl:Class>
     
 
@@ -363,9 +364,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Lemmatization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process of reducing the different forms of a word to one single form.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lemmatization</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>The process of reducing the different forms of a word to one single form.</skos:definition>
+        <skos:prefLabel>lemmatization</skos:prefLabel>
     </owl:Class>
     
 
@@ -374,8 +375,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LevenshteinEditDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/EditDistance"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">levenshtein distance</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:prefLabel>levenshtein distance</skos:prefLabel>
     </owl:Class>
     
 
@@ -384,9 +385,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LexicalMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on a lexical comparison between one or more syntactic features of the subject with one or more syntactic features of the object.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The label of a subject entity matches to an exact synonym of an object entity.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lexical matching process</skos:prefLabel>
+        <skos:definition>A matching process based on a lexical comparison between one or more syntactic features of the subject with one or more syntactic features of the object.</skos:definition>
+        <skos:example>The label of a subject entity matches to an exact synonym of an object entity.</skos:example>
+        <skos:prefLabel>lexical matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -395,9 +396,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LexicalSimilarityThresholdMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A lexical matching process based on a minimum threshold of a score from a comparison based on a lexical similarity algorithm.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject and an object was established because they had a Levenshtein score higher than 0.8.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lexical similarity threshold-based matching process</skos:prefLabel>
+        <skos:definition>A lexical matching process based on a minimum threshold of a score from a comparison based on a lexical similarity algorithm.</skos:definition>
+        <skos:example>A match between a subject and an object was established because they had a Levenshtein score higher than 0.8.</skos:example>
+        <skos:prefLabel>lexical similarity threshold-based matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -406,10 +407,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LinkStripping">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique replacing specific links between words, such as apostrophes, dashes, underscore, etc into dashes or blanks.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;alzheimer&apos;s&apos; becomes &apos;alzheimers&apos;.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link stripping</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A normalization technique replacing specific links between words, such as apostrophes, dashes, underscore, etc into dashes or blanks.</skos:definition>
+        <skos:example>The string &apos;alzheimer&apos;s&apos; becomes &apos;alzheimers&apos;.</skos:example>
+        <skos:prefLabel>link stripping</skos:prefLabel>
     </owl:Class>
     
 
@@ -418,7 +419,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LogicalConsistencyFiltering">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MatchingPostProcessing"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">logical consistency filtering</skos:prefLabel>
+        <skos:prefLabel>logical consistency filtering</skos:prefLabel>
     </owl:Class>
     
 
@@ -427,9 +428,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LogicalReasoning">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on the inferences made by a logical reasoner.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two classes across ontologies are determined equivalent by an OWL reasoner such as ELK.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">logical reasoning process</skos:prefLabel>
+        <skos:definition>A matching process based on the inferences made by a logical reasoner.</skos:definition>
+        <skos:example>Two classes across ontologies are determined equivalent by an OWL reasoner such as ELK.</skos:example>
+        <skos:prefLabel>logical reasoning matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -438,9 +439,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/ManualMappingCuration">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An matching process that is performed by a human agent and is based on human judgement and domain knowledge.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A human curator determines that a subject should be mapped to an object by virtue of their domain expertise.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual mapping curation</skos:prefLabel>
+        <skos:definition>An matching process that is performed by a human agent and is based on human judgement and domain knowledge.</skos:definition>
+        <skos:example>A human curator determines that a subject should be mapped to an object by virtue of their domain expertise.</skos:example>
+        <skos:prefLabel>manual mapping curation</skos:prefLabel>
     </owl:Class>
     
 
@@ -448,9 +449,9 @@
     <!-- https://w3id.org/semapv/vocab/Mapping -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Mapping">
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A triple &lt;s,p,o&gt; comprising a subject entity s, an object entity o and a mapping predicate p.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subject entity NCI:C9305 is mapped to the object entity ICD10:C80.9 using the skos:relatedMatch mapping predicate.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping</skos:prefLabel>
+        <skos:definition>A triple &lt;s,p,o&gt; comprising a subject entity s, an object entity o and a mapping predicate p.</skos:definition>
+        <skos:example>The subject entity NCI:C9305 is mapped to the object entity ICD10:C80.9 using the skos:relatedMatch mapping predicate.</skos:example>
+        <skos:prefLabel>mapping</skos:prefLabel>
     </owl:Class>
     
 
@@ -458,9 +459,9 @@
     <!-- https://w3id.org/semapv/vocab/MappingActivity -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/MappingActivity">
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process that relates to the creation, confirmation, rejection or curation of a mapping.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matching is a mapping activity that results in the creating of a mapping; mapping review is an activity that results in the confirmation of a mapping.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping activity</skos:prefLabel>
+        <skos:definition>A process that relates to the creation, confirmation, rejection or curation of a mapping.</skos:definition>
+        <skos:example>Matching is a mapping activity that results in the creating of a mapping; mapping review is an activity that results in the confirmation of a mapping.</skos:example>
+        <skos:prefLabel>mapping activity</skos:prefLabel>
     </owl:Class>
     
 
@@ -469,9 +470,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/MappingChaining">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on the traversing of multiple mappings.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject A and an object B was established because A was mapped to C, C was mapped to D and D was mapped to B.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping chaining-based matching process</skos:prefLabel>
+        <skos:definition>A matching process based on the traversing of multiple mappings.</skos:definition>
+        <skos:example>A match between a subject A and an object B was established because A was mapped to C, C was mapped to D and D was mapped to B.</skos:example>
+        <skos:prefLabel>mapping chaining-based matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -480,14 +481,14 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/MappingInversion">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <terms:source rdf:resource="https://mapping-commons.github.io/sssom/chaining_rules/"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping flipping</skos:altLabel>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping inversion</skos:altLabel>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping inverting</skos:altLabel>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semantic walk-backs</skos:altLabel>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on the inverting or flipping of the subject with the object of a mapping in accordance with the semantics of the mapping predicate.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A broad match between a subject A and an object B using the skos:narrowMatch mapping relation was established because B was mapped to A using the skos:broadMatch mapping relation.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping inversion-based matching process</skos:prefLabel>
+        <dcterms:source rdf:resource="https://mapping-commons.github.io/sssom/chaining_rules/"/>
+        <skos:altLabel>mapping flipping</skos:altLabel>
+        <skos:altLabel>mapping inversion</skos:altLabel>
+        <skos:altLabel>mapping inverting</skos:altLabel>
+        <skos:altLabel>semantic walk-backs</skos:altLabel>
+        <skos:definition>A matching process based on the inverting or flipping of the subject with the object of a mapping in accordance with the semantics of the mapping predicate.</skos:definition>
+        <skos:example>A broad match between a subject A and an object B using the skos:narrowMatch mapping relation was established because B was mapped to A using the skos:broadMatch mapping relation.</skos:example>
+        <skos:prefLabel>mapping inversion-based matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -496,9 +497,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/MappingReview">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MappingActivity"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process that is concerned with determining if a mapping “candidate” (otherwise determined) is reasonable/correct.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject A and an object B was established elsewhere, and a human reviewer determined that the mapping is true (or false) based on an independent evaluation.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mapping review</skos:prefLabel>
+        <skos:definition>A process that is concerned with determining if a mapping “candidate” (otherwise determined) is reasonable/correct.</skos:definition>
+        <skos:example>A match between a subject A and an object B was established elsewhere, and a human reviewer determined that the mapping is true (or false) based on an independent evaluation.</skos:example>
+        <skos:prefLabel>mapping review</skos:prefLabel>
     </owl:Class>
     
 
@@ -507,11 +508,11 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Matching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MappingActivity"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching operation</skos:altLabel>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching task</skos:altLabel>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An process that results in a mapping between a subject and an object entity.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The label of a subject entity matches to an exact synonym of an object entity.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching process</skos:prefLabel>
+        <skos:altLabel>matching operation</skos:altLabel>
+        <skos:altLabel>matching task</skos:altLabel>
+        <skos:definition>An process that results in a mapping between a subject and an object entity.</skos:definition>
+        <skos:example>The label of a subject entity matches to an exact synonym of an object entity.</skos:example>
+        <skos:prefLabel>matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -520,8 +521,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/MatchingPostProcessing">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MappingActivity"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process applied to a set of mappings, usually with the intention of changing it.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching process post-processing</skos:prefLabel>
+        <skos:definition>A process applied to a set of mappings, usually with the intention of changing it.</skos:definition>
+        <skos:prefLabel>matching process post-processing</skos:prefLabel>
     </owl:Class>
     
 
@@ -530,8 +531,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/MatchingPreprocessing">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MappingActivity"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A preliminary processing of inputs prior to performing matching.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matching process pre-processing</skos:prefLabel>
+        <skos:definition>A preliminary processing of inputs prior to performing matching.</skos:definition>
+        <skos:prefLabel>matching process pre-processing</skos:prefLabel>
     </owl:Class>
     
 
@@ -540,9 +541,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Normalization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MatchingPreprocessing"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A family of preprocessing techniques for reducing strings to be compared to a common format.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normalization</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A family of preprocessing techniques for reducing strings to be compared to a common format.</skos:definition>
+        <skos:prefLabel>normalization</skos:prefLabel>
     </owl:Class>
     
 
@@ -551,10 +552,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/PunctuationElemination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A normalization technique removing all punctation characters from a string.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string &apos;e.g.&apos; becomes &apos;eg&apos;.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">punctuation elimination</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A normalization technique removing all punctation characters from a string.</skos:definition>
+        <skos:example>The string &apos;e.g.&apos; becomes &apos;eg&apos;.</skos:example>
+        <skos:prefLabel>punctuation elimination</skos:prefLabel>
     </owl:Class>
     
 
@@ -563,9 +564,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/RegexRemoval">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A preprocessing method transforming a string by matching a regular expression and then removing that match.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The regex match “[ -]phenotype” is removed from the label field of the subject entity in the mapping.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regex removal</skos:prefLabel>
+        <skos:definition>A preprocessing method transforming a string by matching a regular expression and then removing that match.</skos:definition>
+        <skos:example>The regex match “[ -]phenotype” is removed from the label field of the subject entity in the mapping.</skos:example>
+        <skos:prefLabel>regex removal</skos:prefLabel>
     </owl:Class>
     
 
@@ -574,9 +575,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/RegexReplacement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A preprocessing method transforming a string by matching a regular expression and then replacing that match with a specified substitution string.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The regex match “[ -]phenotype” is replaced by “-disease” for the label field of the subject entity in the mapping.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regex replacement</skos:prefLabel>
+        <skos:definition>A preprocessing method transforming a string by matching a regular expression and then replacing that match with a specified substitution string.</skos:definition>
+        <skos:example>The regex match “[ -]phenotype” is replaced by “-disease” for the label field of the subject entity in the mapping.</skos:example>
+        <skos:prefLabel>regex replacement</skos:prefLabel>
     </owl:Class>
     
 
@@ -585,9 +586,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/SemanticSimilarityThresholdMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on a minimum threshold of a score from a comparison based on a semantic similarity algorithm.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject and an object entity was established because they had a Jaccard score higher than 0.8 based on the set of (common) superclasses.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semantic similarity threshold-based matching process</skos:prefLabel>
+        <skos:definition>A matching process based on a minimum threshold of a score from a comparison based on a semantic similarity algorithm.</skos:definition>
+        <skos:example>A match between a subject and an object entity was established because they had a Jaccard score higher than 0.8 based on the set of (common) superclasses.</skos:example>
+        <skos:prefLabel>semantic similarity threshold-based matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -595,9 +596,9 @@
     <!-- https://w3id.org/semapv/vocab/SimilarityMeasure -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/SimilarityMeasure">
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A technique for determining a score that characterises the similarity between two entities.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">similarity measure</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A technique for determining a score that characterises the similarity between two entities.</skos:definition>
+        <skos:prefLabel>similarity measure</skos:prefLabel>
     </owl:Class>
     
 
@@ -606,7 +607,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/StableMarriageFiltering">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MatchingPostProcessing"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable marriage filtering</skos:prefLabel>
+        <skos:prefLabel>stable marriage filtering</skos:prefLabel>
     </owl:Class>
     
 
@@ -615,8 +616,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Stemming">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process of reducing a word to its word stem.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stemming</skos:prefLabel>
+        <skos:definition>The process of reducing a word to its word stem.</skos:definition>
+        <skos:prefLabel>stemming</skos:prefLabel>
     </owl:Class>
     
 
@@ -625,10 +626,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/StopWordRemoval">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A preprocessing method transforming a string by removing a list of stop words.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The stop-words “of, and, is, a” are removed from the label field of the subject entity in the mapping.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stop-word removal</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A preprocessing method transforming a string by removing a list of stop words.</skos:definition>
+        <skos:example>The stop-words “of, and, is, a” are removed from the label field of the subject entity in the mapping.</skos:example>
+        <skos:prefLabel>stop-word removal</skos:prefLabel>
     </owl:Class>
     
 
@@ -637,9 +638,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/SimilarityMeasure"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A similarity measure based on the comparison of strings.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string-based similarity measure</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A similarity measure based on the comparison of strings.</skos:definition>
+        <skos:prefLabel>string-based similarity measure</skos:prefLabel>
     </owl:Class>
     
 
@@ -648,9 +649,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/StringEquality">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string-based similarity measure which involves determining if two strings associated with mapping entities are equal.</skos:definition>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string equality</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:definition>A string-based similarity measure which involves determining if two strings associated with mapping entities are equal.</skos:definition>
+        <skos:prefLabel>string equality</skos:prefLabel>
     </owl:Class>
     
 
@@ -659,10 +660,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/StructuralMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <terms:source rdf:resource="https://doi.org/10.1016/j.websem.2009.11.002"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structural matching does not involve looking at &quot;values&quot; of properties.</rdfs:comment>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A match between a subject and an object was established because of the similarity of their structural features, e.g., the number of direct property of a class.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">structural matching process</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1016/j.websem.2009.11.002"/>
+        <rdfs:comment>Structural matching does not involve looking at &quot;values&quot; of properties.</rdfs:comment>
+        <skos:example>A match between a subject and an object was established because of the similarity of their structural features, e.g., the number of direct property of a class.</skos:example>
+        <skos:prefLabel>structural matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -671,8 +672,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/SubstringSimilarity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">substring similarity</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:prefLabel>substring similarity</skos:prefLabel>
     </owl:Class>
     
 
@@ -681,8 +682,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/SubstringTest">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">substring test</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:prefLabel>substring test</skos:prefLabel>
     </owl:Class>
     
 
@@ -691,9 +692,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/TermExtraction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">named entity recognition</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">term extraction</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:altLabel>named entity recognition</skos:altLabel>
+        <skos:prefLabel>term extraction</skos:prefLabel>
     </owl:Class>
     
 
@@ -702,7 +703,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/ThresholdFiltering">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MatchingPostProcessing"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">threshold filtering</skos:prefLabel>
+        <skos:prefLabel>threshold filtering</skos:prefLabel>
     </owl:Class>
     
 
@@ -711,8 +712,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/TokenBasedDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">token-based distance</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:prefLabel>token-based distance</skos:prefLabel>
     </owl:Class>
     
 
@@ -721,8 +722,8 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/Tokenization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tokenization</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:prefLabel>tokenization</skos:prefLabel>
     </owl:Class>
     
 
@@ -731,9 +732,9 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/UnspecifiedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A matching process based on an unspecified comparison.</skos:definition>
-        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mapping between a subject and an object was established, but it is no longer clear how or why.</skos:example>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unspecified matching process</skos:prefLabel>
+        <skos:definition>A matching process based on an unspecified comparison.</skos:definition>
+        <skos:example>A mapping between a subject and an object was established, but it is no longer clear how or why.</skos:example>
+        <skos:prefLabel>unspecified matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -742,12 +743,12 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/nGramSimilarity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure"/>
-        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ngram similarity</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <skos:prefLabel>ngram similarity</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 
