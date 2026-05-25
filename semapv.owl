@@ -18,7 +18,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:semapv_voc="https://w3id.org/semapv/vocab/">
     <owl:Ontology rdf:about="http://w3id.org/semapv/vocab/semapv.owl">
-        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2023-11-08/semapv.owl"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2025-01-06/semapv.owl"/>
         <dcterms:description>The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <dcterms:title>Semantic Mapping Vocabulary</dcterms:title>
@@ -256,18 +256,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
         <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition>A normalization technique replacing all blank characters, such as space, tabulation, carriage return (or sequences of these) into a single blank character.</skos:definition>
-        <skos:example>The string &apos;ontology matching&apos; (two spaces between &apos;ontology&apos; and &apos;matching) becomes &apos;ontology matching&apos; (one space).</skos:example>
+        <skos:example>The string &apos;ontology  matching&apos; (two spaces between &apos;ontology&apos; and &apos;matching) becomes &apos;ontology matching&apos; (one space).</skos:example>
         <skos:prefLabel>blank normalisation</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/semapv/vocab/BoundedPathMatching -->
-
-    <owl:Class rdf:about="https://w3id.org/semapv/vocab/BoundedPathMatching">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StructuralMatching"/>
-        <skos:definition>A matching process based on the comparison of matched super and subclasses (paths) of two entities.</skos:definition>
-        <skos:prefLabel>bounded path matching</skos:prefLabel>
     </owl:Class>
     
 
@@ -338,17 +328,6 @@
     
 
 
-    <!-- https://w3id.org/semapv/vocab/GraphRepresentationLearningBasedMatching -->
-
-    <owl:Class rdf:about="https://w3id.org/semapv/vocab/GraphRepresentationLearningBasedMatching">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition>A matching process that uses graph representation learning which is a method in machine learning that focuses on learning a compact representation for graphs, capturing their structural information.</skos:definition>
-        <skos:example>Matches between entities are identified by analyzing the learned representations that encode the structural features and relationships within graph data.</skos:example>
-        <skos:prefLabel>graph representation learning-based matching process</skos:prefLabel>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/semapv/vocab/HammingDistance -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/HammingDistance">
@@ -367,17 +346,6 @@
         <skos:definition>A matching process based on individual representations (or instances).</skos:definition>
         <skos:example>A match between a subject A and an object B was established because they share the same instances.</skos:example>
         <skos:prefLabel>instance-based matching process</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/semapv/vocab/LLMBasedMatching -->
-
-    <owl:Class rdf:about="https://w3id.org/semapv/vocab/LLMBasedMatching">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition>A matching process that employs large language models (LLMs) which are pre-trained on vast amounts of text data and can understand and generate human-like text, making them suitable for tasks requiring a deep understanding of language.</skos:definition>
-        <skos:example>Matches between entities are determined through the language understanding capabilities of LLMs, such as semantic context and language inference.</skos:example>
-        <skos:prefLabel>LLM-based matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -462,18 +430,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
         <skos:definition>A matching process based on the inferences made by a logical reasoner.</skos:definition>
         <skos:example>Two classes across ontologies are determined equivalent by an OWL reasoner such as ELK.</skos:example>
-        <skos:prefLabel>logical reasoning process</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/semapv/vocab/MachineLearningBasedMatching -->
-
-    <owl:Class rdf:about="https://w3id.org/semapv/vocab/MachineLearningBasedMatching">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition>A matching process that involves machine learning algorithms which learn from data to find patterns or make decisions with minimal human intervention.</skos:definition>
-        <skos:example>Matches between entities are made by applying learned models to data points to predict similarities or relationships.</skos:example>
-        <skos:prefLabel>machine learning-based matching process</skos:prefLabel>
+        <skos:prefLabel>logical reasoning matching process</skos:prefLabel>
     </owl:Class>
     
 
@@ -771,17 +728,6 @@
     
 
 
-    <!-- https://w3id.org/semapv/vocab/TransformerBasedMatching -->
-
-    <owl:Class rdf:about="https://w3id.org/semapv/vocab/TransformerBasedMatching">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <skos:definition>A matching process that utilizes transformer models, which are a type of deep learning model architecture designed to handle sequential data, particularly for natural language processing tasks.</skos:definition>
-        <skos:example>Matches between entities are established based on the contextual relationships learned by the transformer from large datasets.</skos:example>
-        <skos:prefLabel>transformer-based matching process</skos:prefLabel>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/semapv/vocab/UnspecifiedMatching -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/UnspecifiedMatching">
@@ -804,5 +750,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

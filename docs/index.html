@@ -5,14 +5,14 @@
     <style>
         #pylode {
             position: fixed;
-            top: 130px;
-            left: -80px;
+            top: 205px;
+            left: -150px;
             font-size: small;
             transform: rotate(-90deg);
             color: grey;
         }
         #pylode a {
-            font-size: 2em;
+            font-size: 1.5em;
             font-weight: bold;
             text-decoration: none;
             color: #005A9C;
@@ -28,6 +28,12 @@
         }
         #pylode #version {
             font-size: 1.0em;
+        }
+
+        #profile {
+            font-style: italic;
+            font-size: 1.25em;
+            color: darkred!important;
         }
 
         .cardinality {
@@ -136,7 +142,7 @@
             background-position: top left;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            text-align: justify;
+            text-align: left;
         }
 
         section {
@@ -260,13 +266,16 @@
 code{
     word-wrap: break-word;
   }
-  table {
+table {
     table-layout: fixed;
     width: 100%;
-  }
-  td {
+}
+td {
     word-wrap: break-word;
-  }
+}
+#legend table.entity {
+    width: 25%;
+}
 	</style>
     <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC" rel="icon" sizes="16x16" type="image/png">
     <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==" rel="icon" sizes="32x32" type="image/png">
@@ -330,7 +339,7 @@ code{
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="The property that identifies the version IRI of an ontology. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Iri</a>
             </dt>
             <dd>
-              <a href="http://w3id.org/semapv/vocab/releases/2023-11-08/semapv.owl">ns2:semapv.owl</a>
+              <a href="http://w3id.org/semapv/vocab/releases/2025-01-06/semapv.owl">http://w3id.org/semapv/vocab/releases/2025-01-06/semapv.owl</a>
             </dd>
           </div>
           <div>
@@ -373,7 +382,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1016/j.websem.2018.04.001">ns3:j.websem.2018.04.001</a>
+                <a href="https://doi.org/10.1016/j.websem.2018.04.001">https://doi.org/10.1016/j.websem.2018.04.001</a>
               </td>
             </tr>
             <tr>
@@ -382,7 +391,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -411,7 +420,7 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
               </th>
               <td>
-                <pre>The string 'ontology matching' (two spaces between 'ontology' and 'matching) becomes 'ontology matching' (one space).</pre>
+                <pre>The string 'ontology  matching' (two spaces between 'ontology' and 'matching) becomes 'ontology matching' (one space).</pre>
               </td>
             </tr>
             <tr>
@@ -419,7 +428,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -428,37 +437,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="boundedpathmatching">
-          <h3>bounded path matching
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/semapv/vocab/BoundedPathMatching</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>A matching process based on the comparison of matched super and subclasses (paths) of two entities.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/semapv/vocab/StructuralMatching">semapv_voc:StructuralMatching</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -482,7 +461,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">semapv_voc:MatchingPostProcessing</a>
+                  <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">matching process post-processing</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -519,7 +498,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -528,7 +507,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -566,7 +545,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -603,7 +582,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -612,7 +591,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -649,7 +628,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -658,7 +637,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -681,7 +660,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -690,7 +669,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">semapv_voc:StringBasedSimilarityMeasure</a>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">string-based similarity measure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -701,45 +680,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/LevenshteinEditDistance">semapv_voc:LevenshteinEditDistance</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="graphrepresentationlearning-basedmatchingprocess">
-          <h3>graph representation learning-based matching process
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/semapv/vocab/GraphRepresentationLearningBasedMatching</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>A matching process that uses graph representation learning which is a method in machine learning that focuses on learning a compact representation for graphs, capturing their structural information.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
-              </th>
-              <td>
-                <pre>Matches between entities are identified by analyzing the learned representations that encode the structural features and relationships within graph data.</pre>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/LevenshteinEditDistance">levenshtein distance</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -762,7 +703,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -771,7 +712,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">semapv_voc:StringBasedSimilarityMeasure</a>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">string-based similarity measure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -808,7 +749,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -817,45 +758,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="LLM-basedmatchingprocess">
-          <h3>LLM-based matching process
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/semapv/vocab/LLMBasedMatching</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>A matching process that employs large language models (LLMs) which are pre-trained on vast amounts of text data and can understand and generate human-like text, making them suitable for tasks requiring a deep understanding of language.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
-              </th>
-              <td>
-                <pre>Matches between entities are determined through the language understanding capabilities of LLMs, such as semantic context and language inference.</pre>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -878,7 +781,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -887,7 +790,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/SimilarityMeasure">semapv_voc:SimilarityMeasure</a>
+                  <a href="https://w3id.org/semapv/vocab/SimilarityMeasure">similarity measure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -916,7 +819,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -925,7 +828,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -948,7 +851,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -957,7 +860,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/EditDistance">semapv_voc:EditDistance</a>
+                  <a href="https://w3id.org/semapv/vocab/EditDistance">edit distance</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -995,7 +898,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1033,7 +936,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1070,7 +973,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -1079,7 +982,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1103,15 +1006,15 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">semapv_voc:MatchingPostProcessing</a>
+                  <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">matching process post-processing</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="logicalreasoningprocess">
-          <h3>logical reasoning process
+        <div class="property entity" id="logicalreasoningmatchingprocess">
+          <h3>logical reasoning matching process
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
@@ -1141,45 +1044,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="machinelearning-basedmatchingprocess">
-          <h3>machine learning-based matching process
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/semapv/vocab/MachineLearningBasedMatching</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>A matching process that involves machine learning algorithms which learn from data to find patterns or make decisions with minimal human intervention.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
-              </th>
-              <td>
-                <pre>Matches between entities are made by applying learned models to data points to predict similarities or relationships.</pre>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1217,7 +1082,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1284,25 +1149,25 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/MappingReview">semapv_voc:MappingReview</a>
+                      <a href="https://w3id.org/semapv/vocab/MappingReview">mapping review</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                      <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">semapv_voc:MatchingPostProcessing</a>
+                      <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">matching process post-processing</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">semapv_voc:MatchingPreprocessing</a>
+                      <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">matching process pre-processing</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1342,7 +1207,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1388,7 +1253,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1426,7 +1291,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MappingActivity">semapv_voc:MappingActivity</a>
+                  <a href="https://w3id.org/semapv/vocab/MappingActivity">mapping activity</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1464,7 +1329,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MappingActivity">semapv_voc:MappingActivity</a>
+                  <a href="https://w3id.org/semapv/vocab/MappingActivity">mapping activity</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1477,97 +1342,73 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/BackgroundKnowledgeBasedMatching">semapv_voc:BackgroundKnowledgeBasedMatching</a>
+                      <a href="https://w3id.org/semapv/vocab/BackgroundKnowledgeBasedMatching">background knowledge-based matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/CompositeMatching">semapv_voc:CompositeMatching</a>
+                      <a href="https://w3id.org/semapv/vocab/CompositeMatching">composite matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/GraphRepresentationLearningBasedMatching">semapv_voc:GraphRepresentationLearningBasedMatching</a>
+                      <a href="https://w3id.org/semapv/vocab/InstanceBasedMatching">instance-based matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/InstanceBasedMatching">semapv_voc:InstanceBasedMatching</a>
+                      <a href="https://w3id.org/semapv/vocab/LexicalMatching">lexical matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/LLMBasedMatching">semapv_voc:LLMBasedMatching</a>
+                      <a href="https://w3id.org/semapv/vocab/LexicalSimilarityThresholdMatching">lexical similarity threshold-based matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/LexicalMatching">semapv_voc:LexicalMatching</a>
+                      <a href="https://w3id.org/semapv/vocab/LogicalReasoning">logical reasoning matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/LexicalSimilarityThresholdMatching">semapv_voc:LexicalSimilarityThresholdMatching</a>
+                      <a href="https://w3id.org/semapv/vocab/ManualMappingCuration">manual mapping curation</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/LogicalReasoning">semapv_voc:LogicalReasoning</a>
+                      <a href="https://w3id.org/semapv/vocab/MappingChaining">mapping chaining-based matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/MachineLearningBasedMatching">semapv_voc:MachineLearningBasedMatching</a>
+                      <a href="https://w3id.org/semapv/vocab/MappingInversion">mapping inversion-based matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/ManualMappingCuration">semapv_voc:ManualMappingCuration</a>
+                      <a href="https://w3id.org/semapv/vocab/SemanticSimilarityThresholdMatching">semantic similarity threshold-based matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/MappingChaining">semapv_voc:MappingChaining</a>
+                      <a href="https://w3id.org/semapv/vocab/StructuralMatching">structural matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/MappingInversion">semapv_voc:MappingInversion</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/semapv/vocab/SemanticSimilarityThresholdMatching">semapv_voc:SemanticSimilarityThresholdMatching</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/semapv/vocab/StructuralMatching">semapv_voc:StructuralMatching</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/semapv/vocab/TransformerBasedMatching">semapv_voc:TransformerBasedMatching</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://w3id.org/semapv/vocab/UnspecifiedMatching">semapv_voc:UnspecifiedMatching</a>
+                      <a href="https://w3id.org/semapv/vocab/UnspecifiedMatching">unspecified matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1599,7 +1440,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MappingActivity">semapv_voc:MappingActivity</a>
+                  <a href="https://w3id.org/semapv/vocab/MappingActivity">mapping activity</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1612,25 +1453,25 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/CardinalityFiltering">semapv_voc:CardinalityFiltering</a>
+                      <a href="https://w3id.org/semapv/vocab/CardinalityFiltering">cardinality filtering</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/LogicalConsistencyFiltering">semapv_voc:LogicalConsistencyFiltering</a>
+                      <a href="https://w3id.org/semapv/vocab/LogicalConsistencyFiltering">logical consistency filtering</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/StableMarriageFiltering">semapv_voc:StableMarriageFiltering</a>
+                      <a href="https://w3id.org/semapv/vocab/StableMarriageFiltering">stable marriage filtering</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/ThresholdFiltering">semapv_voc:ThresholdFiltering</a>
+                      <a href="https://w3id.org/semapv/vocab/ThresholdFiltering">threshold filtering</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1662,7 +1503,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MappingActivity">semapv_voc:MappingActivity</a>
+                  <a href="https://w3id.org/semapv/vocab/MappingActivity">mapping activity</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1673,7 +1514,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1702,7 +1543,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -1711,7 +1552,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">semapv_voc:MatchingPreprocessing</a>
+                  <a href="https://w3id.org/semapv/vocab/MatchingPreprocessing">matching process pre-processing</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1724,79 +1565,79 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/BlankNormalisation">semapv_voc:BlankNormalisation</a>
+                      <a href="https://w3id.org/semapv/vocab/BlankNormalisation">blank normalisation</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/CaseNormalization">semapv_voc:CaseNormalization</a>
+                      <a href="https://w3id.org/semapv/vocab/CaseNormalization">case normalization</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/DiacriticsSuppression">semapv_voc:DiacriticsSuppression</a>
+                      <a href="https://w3id.org/semapv/vocab/DiacriticsSuppression">diacritics suppression</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/DigitSuppression">semapv_voc:DigitSuppression</a>
+                      <a href="https://w3id.org/semapv/vocab/DigitSuppression">digit suppression</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/Lemmatization">semapv_voc:Lemmatization</a>
+                      <a href="https://w3id.org/semapv/vocab/Lemmatization">lemmatization</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/LinkStripping">semapv_voc:LinkStripping</a>
+                      <a href="https://w3id.org/semapv/vocab/LinkStripping">link stripping</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/PunctuationElemination">semapv_voc:PunctuationElemination</a>
+                      <a href="https://w3id.org/semapv/vocab/PunctuationElemination">punctuation elimination</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/RegexRemoval">semapv_voc:RegexRemoval</a>
+                      <a href="https://w3id.org/semapv/vocab/RegexRemoval">regex removal</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/RegexReplacement">semapv_voc:RegexReplacement</a>
+                      <a href="https://w3id.org/semapv/vocab/RegexReplacement">regex replacement</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/Stemming">semapv_voc:Stemming</a>
+                      <a href="https://w3id.org/semapv/vocab/Stemming">stemming</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/StopWordRemoval">semapv_voc:StopWordRemoval</a>
+                      <a href="https://w3id.org/semapv/vocab/StopWordRemoval">stop-word removal</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/TermExtraction">semapv_voc:TermExtraction</a>
+                      <a href="https://w3id.org/semapv/vocab/TermExtraction">term extraction</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/Tokenization">semapv_voc:Tokenization</a>
+                      <a href="https://w3id.org/semapv/vocab/Tokenization">tokenization</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1835,7 +1676,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -1844,7 +1685,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1882,7 +1723,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1920,7 +1761,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1958,7 +1799,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1987,7 +1828,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -1998,13 +1839,13 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/LanguageBasedSimilarityMeasure">semapv_voc:LanguageBasedSimilarityMeasure</a>
+                      <a href="https://w3id.org/semapv/vocab/LanguageBasedSimilarityMeasure">language-based similarity measure</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">semapv_voc:StringBasedSimilarityMeasure</a>
+                      <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">string-based similarity measure</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -2030,7 +1871,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">semapv_voc:MatchingPostProcessing</a>
+                  <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">matching process post-processing</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2060,7 +1901,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2097,7 +1938,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -2106,7 +1947,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2135,7 +1976,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -2144,7 +1985,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/SimilarityMeasure">semapv_voc:SimilarityMeasure</a>
+                  <a href="https://w3id.org/semapv/vocab/SimilarityMeasure">similarity measure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2157,43 +1998,43 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/EditDistance">semapv_voc:EditDistance</a>
+                      <a href="https://w3id.org/semapv/vocab/EditDistance">edit distance</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/HammingDistance">semapv_voc:HammingDistance</a>
+                      <a href="https://w3id.org/semapv/vocab/HammingDistance">hamming distance</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/StringEquality">semapv_voc:StringEquality</a>
+                      <a href="https://w3id.org/semapv/vocab/StringEquality">string equality</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/SubstringSimilarity">semapv_voc:SubstringSimilarity</a>
+                      <a href="https://w3id.org/semapv/vocab/SubstringSimilarity">substring similarity</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/SubstringTest">semapv_voc:SubstringTest</a>
+                      <a href="https://w3id.org/semapv/vocab/SubstringTest">substring test</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/TokenBasedDistance">semapv_voc:TokenBasedDistance</a>
+                      <a href="https://w3id.org/semapv/vocab/TokenBasedDistance">token-based distance</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/nGramSimilarity">semapv_voc:nGramSimilarity</a>
+                      <a href="https://w3id.org/semapv/vocab/nGramSimilarity">ngram similarity</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -2224,7 +2065,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -2233,7 +2074,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">semapv_voc:StringBasedSimilarityMeasure</a>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">string-based similarity measure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2270,7 +2111,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1016/j.websem.2009.11.002">ns3:j.websem.2009.11.002</a>
+                <a href="https://doi.org/10.1016/j.websem.2009.11.002">https://doi.org/10.1016/j.websem.2009.11.002</a>
               </td>
             </tr>
             <tr>
@@ -2279,18 +2120,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/semapv/vocab/BoundedPathMatching">semapv_voc:BoundedPathMatching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2313,7 +2143,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -2322,7 +2152,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">semapv_voc:StringBasedSimilarityMeasure</a>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">string-based similarity measure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2345,7 +2175,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -2354,7 +2184,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">semapv_voc:StringBasedSimilarityMeasure</a>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">string-based similarity measure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2377,7 +2207,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -2386,7 +2216,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2410,7 +2240,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">semapv_voc:MatchingPostProcessing</a>
+                  <a href="https://w3id.org/semapv/vocab/MatchingPostProcessing">matching process post-processing</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2433,7 +2263,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -2442,7 +2272,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">semapv_voc:StringBasedSimilarityMeasure</a>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">string-based similarity measure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2465,7 +2295,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -2474,45 +2304,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Normalization">semapv_voc:Normalization</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="transformer-basedmatchingprocess">
-          <h3>transformer-based matching process
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/semapv/vocab/TransformerBasedMatching</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>A matching process that utilizes transformer models, which are a type of deep learning model architecture designed to handle sequential data, particularly for natural language processing tasks.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
-              </th>
-              <td>
-                <pre>Matches between entities are established based on the contextual relationships learned by the transformer from large datasets.</pre>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2550,7 +2342,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/Matching">semapv_voc:Matching</a>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2573,7 +2365,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://doi.org/10.1007/978-3-642-38721-0">ns4:978-3-642-38721-0</a>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
               </td>
             </tr>
             <tr>
@@ -2582,7 +2374,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">semapv_voc:StringBasedSimilarityMeasure</a>
+                  <a href="https://w3id.org/semapv/vocab/StringBasedSimilarityMeasure">string-based similarity measure</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2696,7 +2488,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">semapv_voc:nonIsomorphicMatch</a>
+                  <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">non-isomorphic match</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -2707,7 +2499,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/crossSpeciesBroadMatch">semapv_voc:crossSpeciesBroadMatch</a>
+                  <a href="https://w3id.org/semapv/vocab/crossSpeciesBroadMatch">cross-species broad match</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -2753,7 +2545,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2004/02/skos/core#mappingRelation">skos:mappingRelation</a>
+                  <a href="http://www.w3.org/2004/02/skos/core#mappingRelation">is in mapping relation with</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -2766,13 +2558,13 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2004/02/skos/core#exactMatch">skos:exactMatch</a>
+                      <a href="http://www.w3.org/2004/02/skos/core#exactMatch">has exact match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/crossSpeciesCloseMatch">semapv_voc:crossSpeciesCloseMatch</a>
+                      <a href="https://w3id.org/semapv/vocab/crossSpeciesCloseMatch">cross-species close match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
@@ -2835,13 +2627,13 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2004/02/skos/core#closeMatch">skos:closeMatch</a>
+                      <a href="http://www.w3.org/2004/02/skos/core#closeMatch">has close match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/isomorphicMatch">semapv_voc:isomorphicMatch</a>
+                      <a href="https://w3id.org/semapv/vocab/isomorphicMatch">isomorphic match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
@@ -2904,19 +2696,19 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2004/02/skos/core#closeMatch">skos:closeMatch</a>
+                      <a href="http://www.w3.org/2004/02/skos/core#closeMatch">has close match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/isomorphicMatch">semapv_voc:isomorphicMatch</a>
+                      <a href="https://w3id.org/semapv/vocab/isomorphicMatch">isomorphic match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">semapv_voc:nonIsomorphicMatch</a>
+                      <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">non-isomorphic match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
@@ -2964,7 +2756,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">semapv_voc:nonIsomorphicMatch</a>
+                  <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">non-isomorphic match</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -2975,7 +2767,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/crossSpeciesNarrowMatch">semapv_voc:crossSpeciesNarrowMatch</a>
+                  <a href="https://w3id.org/semapv/vocab/crossSpeciesNarrowMatch">cross-species narrow match</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -3034,7 +2826,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">semapv_voc:nonIsomorphicMatch</a>
+                  <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">non-isomorphic match</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -3045,7 +2837,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="https://w3id.org/semapv/vocab/crossSpeciesExactMatch">semapv_voc:crossSpeciesExactMatch</a>
+                  <a href="https://w3id.org/semapv/vocab/crossSpeciesExactMatch">cross-species exact match</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -3082,7 +2874,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">ns5:3</a>
+                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</a>
               </td>
             </tr>
             <tr>
@@ -3091,7 +2883,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2004/02/skos/core#broadMatch">skos:broadMatch</a>
+                  <a href="http://www.w3.org/2004/02/skos/core#broadMatch">has broader match</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -3120,7 +2912,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">ns5:3</a>
+                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</a>
               </td>
             </tr>
             <tr>
@@ -3131,13 +2923,13 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2004/02/skos/core#closeMatch">skos:closeMatch</a>
+                      <a href="http://www.w3.org/2004/02/skos/core#closeMatch">has close match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">semapv_voc:nonIsomorphicMatch</a>
+                      <a href="https://w3id.org/semapv/vocab/nonIsomorphicMatch">non-isomorphic match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
@@ -3176,7 +2968,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">ns5:3</a>
+                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</a>
               </td>
             </tr>
             <tr>
@@ -3187,13 +2979,13 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2004/02/skos/core#relatedMatch">skos:relatedMatch</a>
+                      <a href="http://www.w3.org/2004/02/skos/core#relatedMatch">has related match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/isomorphicMatch">semapv_voc:isomorphicMatch</a>
+                      <a href="https://w3id.org/semapv/vocab/isomorphicMatch">isomorphic match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
@@ -3224,7 +3016,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">ns5:3</a>
+                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</a>
               </td>
             </tr>
             <tr>
@@ -3233,7 +3025,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2004/02/skos/core#narrowMatch">skos:narrowMatch</a>
+                  <a href="http://www.w3.org/2004/02/skos/core#narrowMatch">has narrower match</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -3262,7 +3054,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">ns5:3</a>
+                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</a>
               </td>
             </tr>
             <tr>
@@ -3271,7 +3063,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2004/02/skos/core#mappingRelation">skos:mappingRelation</a>
+                  <a href="http://www.w3.org/2004/02/skos/core#mappingRelation">is in mapping relation with</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -3284,13 +3076,13 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2004/02/skos/core#exactMatch">skos:exactMatch</a>
+                      <a href="http://www.w3.org/2004/02/skos/core#exactMatch">has exact match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/crossSpeciesExactMatch">semapv_voc:crossSpeciesExactMatch</a>
+                      <a href="https://w3id.org/semapv/vocab/crossSpeciesExactMatch">cross-species exact match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
@@ -3321,7 +3113,7 @@ code{
                 <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
               </th>
               <td>
-                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">ns5:3</a>
+                <a href="https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3">https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/3</a>
               </td>
             </tr>
             <tr>
@@ -3330,7 +3122,7 @@ code{
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2004/02/skos/core#mappingRelation">skos:mappingRelation</a>
+                  <a href="http://www.w3.org/2004/02/skos/core#mappingRelation">is in mapping relation with</a>
                   <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                 </span>
               </td>
@@ -3343,25 +3135,25 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2004/02/skos/core#broadMatch">skos:broadMatch</a>
+                      <a href="http://www.w3.org/2004/02/skos/core#broadMatch">has broader match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2004/02/skos/core#narrowMatch">skos:narrowMatch</a>
+                      <a href="http://www.w3.org/2004/02/skos/core#narrowMatch">has narrower match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2004/02/skos/core#relatedMatch">skos:relatedMatch</a>
+                      <a href="http://www.w3.org/2004/02/skos/core#relatedMatch">has related match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://w3id.org/semapv/vocab/crossSpeciesCloseMatch">semapv_voc:crossSpeciesCloseMatch</a>
+                      <a href="https://w3id.org/semapv/vocab/crossSpeciesCloseMatch">cross-species close match</a>
                       <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
                     </span>
                   </li>
@@ -3385,22 +3177,6 @@ code{
           <dt id="ns1">ns1</dt>
           <dd>
             <code>http://w3id.org/semapv/vocab/</code>
-          </dd>
-          <dt id="ns2">ns2</dt>
-          <dd>
-            <code>http://w3id.org/semapv/vocab/releases/2023-11-08/</code>
-          </dd>
-          <dt id="ns3">ns3</dt>
-          <dd>
-            <code>https://doi.org/10.1016/</code>
-          </dd>
-          <dt id="ns4">ns4</dt>
-          <dd>
-            <code>https://doi.org/10.1007/</code>
-          </dd>
-          <dt id="ns5">ns5</dt>
-          <dd>
-            <code>https://github.com/mapping-commons/semantic-mapping-vocabulary/issues/</code>
           </dd>
           <dt id="owl">owl</dt>
           <dd>
@@ -3453,7 +3229,10 @@ code{
           <span id="y">y</span>
           <span>LODE</span>
         </a>
-        <a href="https://github.com/rdflib/pyLODE/release/3.0.4" id="version">3.0.4</a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.1.4" id="version">3.1.4</a>
+        <span> with the </span>
+        <a href="https://w3id.org/profile/ontpub" id="profile">OntPub</a>
+        <span>profile</span>
       </p>
     </div>
     <div id="toc">
@@ -3476,9 +3255,6 @@ code{
               <a href="#blanknormalisation">blank normalisation</a>
             </li>
             <li>
-              <a href="#boundedpathmatching">bounded path matching</a>
-            </li>
-            <li>
               <a href="#cardinalityfiltering">cardinality filtering</a>
             </li>
             <li>
@@ -3497,16 +3273,10 @@ code{
               <a href="#editdistance">edit distance</a>
             </li>
             <li>
-              <a href="#graphrepresentationlearning-basedmatchingprocess">graph representation learning-based matching process</a>
-            </li>
-            <li>
               <a href="#hammingdistance">hamming distance</a>
             </li>
             <li>
               <a href="#instance-basedmatchingprocess">instance-based matching process</a>
-            </li>
-            <li>
-              <a href="#LLM-basedmatchingprocess">LLM-based matching process</a>
             </li>
             <li>
               <a href="#language-basedsimilaritymeasure">language-based similarity measure</a>
@@ -3530,10 +3300,7 @@ code{
               <a href="#logicalconsistencyfiltering">logical consistency filtering</a>
             </li>
             <li>
-              <a href="#logicalreasoningprocess">logical reasoning process</a>
-            </li>
-            <li>
-              <a href="#machinelearning-basedmatchingprocess">machine learning-based matching process</a>
+              <a href="#logicalreasoningmatchingprocess">logical reasoning matching process</a>
             </li>
             <li>
               <a href="#manualmappingcuration">manual mapping curation</a>
@@ -3615,9 +3382,6 @@ code{
             </li>
             <li>
               <a href="#tokenization">tokenization</a>
-            </li>
-            <li>
-              <a href="#transformer-basedmatchingprocess">transformer-based matching process</a>
             </li>
             <li>
               <a href="#unspecifiedmatchingprocess">unspecified matching process</a>
@@ -3707,18 +3471,6 @@ code{
             </li>
             <li>
               <a href="#ns1">ns1</a>
-            </li>
-            <li>
-              <a href="#ns2">ns2</a>
-            </li>
-            <li>
-              <a href="#ns3">ns3</a>
-            </li>
-            <li>
-              <a href="#ns4">ns4</a>
-            </li>
-            <li>
-              <a href="#ns5">ns5</a>
             </li>
             <li>
               <a href="#owl">owl</a>
