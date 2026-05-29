@@ -247,7 +247,7 @@
         <skos:altLabel>agentic matching</skos:altLabel>
         <skos:altLabel>agentic ontology matching</skos:altLabel>
         <skos:definition>A matching process in which an autonomous agent plans and executes a multi-step workflow — typically involving tool use, retrieval, intermediate reasoning, and self-evaluation — to determine matches between entities. The agent decides at runtime what information to gather, which techniques to apply, and when to stop.</skos:definition>
-        <skos:example>An agent is given a pair of candidate entities and autonomously decides to look up their labels, query an external knowledge base, retrieve definitions, compare them with a similarity measure, and revise its judgement before producing a final match decision; the OntoAligner toolkit provides RAG-based agentic matching of this kind.</skos:example>
+        <skos:example>An agent is given a pair of candidate entities and autonomously decides to look up their labels, query an external knowledge base, retrieve definitions, compare them with a similarity measure, and revise its judgement before producing a final match decision; the OntoAligner toolkit provides agentic matching of this kind.</skos:example>
         <skos:prefLabel>agent-based matching process</skos:prefLabel>
     </owl:Class>
     
@@ -271,7 +271,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
         <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:definition>A normalization technique replacing all blank characters, such as space, tabulation, carriage return (or sequences of these) into a single blank character.</skos:definition>
-        <skos:example>The string &apos;ontology matching&apos; (two spaces between &apos;ontology&apos; and &apos;matching) becomes &apos;ontology matching&apos; (one space).</skos:example>
+        <skos:example>The string &apos;ontology  matching&apos; (two spaces between &apos;ontology&apos; and &apos;matching&apos;) becomes &apos;ontology matching&apos; (one space).</skos:example>
         <skos:prefLabel>blank normalisation</skos:prefLabel>
     </owl:Class>
     
@@ -297,7 +297,7 @@
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/BoundedPathMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StructuralMatching"/>
         <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <rdfs:comment>Described as a structural matching technique in Euzenat &amp; Shvaiko, &quot;Ontology Matching&quot; (2nd ed., 2013), and implemented in classical structural OM systems.</rdfs:comment>
+        <rdfs:comment>Described as a structural matching technique in Euzenat &amp; Shvaiko, &quot;Ontology Matching&quot; (2nd ed., 2013), and implemented in classical structural OM systems such as Anchor-PROMPT.</rdfs:comment>
         <skos:definition>A structural matching process based on the comparison of the matched super- and subclass paths (up to a bounded depth) of two candidate entities.</skos:definition>
         <skos:example>Two classes are matched because their direct superclasses and subclasses (within a bounded depth) are already paired by other matchers, and the structural agreement among neighbours raises confidence in the match.</skos:example>
         <skos:prefLabel>bounded path matching</skos:prefLabel>
@@ -538,7 +538,7 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/MachineLearningBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
-        <dcterms:source rdf:resource="https://doi.org/10.48550/arXiv.2503.21902"/>
+        <dcterms:source rdf:resource="https://doi.org/10.1145/511446.511532"/>
         <skos:altLabel>ML-based matching</skos:altLabel>
         <skos:definition>A matching process in which matches between entities are predicted by machine learning models trained on labelled data or learned representations.</skos:definition>
         <skos:example>A trained machine learning model classifies a pair of candidate entities as matching or not based on learned features; the OntoAligner toolkit packages a number of such models.</skos:example>
