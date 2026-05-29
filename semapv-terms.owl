@@ -9,7 +9,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/semapv/vocab/semapv-terms.owl">
-        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2026-05-25/semapv-terms.owl"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2026-05-29/semapv-terms.owl"/>
     </owl:Ontology>
     
 
@@ -70,11 +70,12 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/AgentBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
+        <terms:source rdf:resource="https://doi.org/10.48550/arXiv.2503.21902"/>
         <rdfs:comment>Distinguished from single-step LLM-based matching by the agent&apos;s autonomy over its own process. Distinguished from composite matching, which combines heterogeneous matching techniques under a fixed pipeline, by the agent&apos;s runtime control over what to do next. In current practice, agent-based matchers are predominantly driven by large language models, but this class does not commit to a particular agent technology — a specific process may also be classified as semapv:LLMBasedMatching (or any other matching class) where appropriate.</rdfs:comment>
         <skos:altLabel>agentic matching</skos:altLabel>
         <skos:altLabel>agentic ontology matching</skos:altLabel>
         <skos:definition>A matching process in which an autonomous agent plans and executes a multi-step workflow — typically involving tool use, retrieval, intermediate reasoning, and self-evaluation — to determine matches between entities. The agent decides at runtime what information to gather, which techniques to apply, and when to stop.</skos:definition>
-        <skos:example>An agent is given a pair of candidate entities and autonomously decides to look up their labels, query an external knowledge base, retrieve definitions, compare them with a similarity measure, and revise its judgement before producing a final match decision.</skos:example>
+        <skos:example>An agent is given a pair of candidate entities and autonomously decides to look up their labels, query an external knowledge base, retrieve definitions, compare them with a similarity measure, and revise its judgement before producing a final match decision; the OntoAligner toolkit provides RAG-based agentic matching of this kind.</skos:example>
         <skos:prefLabel>agent-based matching process</skos:prefLabel>
     </owl:Class>
     
@@ -104,11 +105,29 @@
     
 
 
+    <!-- https://w3id.org/semapv/vocab/Blocking -->
+
+    <owl:Class rdf:about="https://w3id.org/semapv/vocab/Blocking">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MappingActivity"/>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <rdfs:comment>Blocking is conceptually distinct from matching: a blocker is recall-oriented and typically encodes each entity independently of the others, whereas a matcher is precision-oriented and decides about a specific candidate pair. Many modern pipelines combine an embedding-based blocker with a transformer- or LLM-based matcher.</rdfs:comment>
+        <skos:altLabel>candidate generation</skos:altLabel>
+        <skos:altLabel>candidate retrieval</skos:altLabel>
+        <skos:definition>A mapping activity that, given two sets of input entities, produces a reduced set of candidate entity pairs likely to match — favouring recall over precision — to be passed on to a downstream matching process.</skos:definition>
+        <skos:example>Out of 10^7 possible subject–object pairs, a blocker returns 10^5 candidate pairs by applying inexpensive comparisons such as token overlap, hash buckets, or embedding-space nearest-neighbour search.</skos:example>
+        <skos:prefLabel>blocking</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/semapv/vocab/BoundedPathMatching -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/BoundedPathMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/StructuralMatching"/>
-        <skos:definition>A structural matching process based on the comparison of matched super- and subclasses (paths) of two entities.</skos:definition>
+        <terms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
+        <rdfs:comment>Described as a structural matching technique in Euzenat &amp; Shvaiko, &quot;Ontology Matching&quot; (2nd ed., 2013), and implemented in classical structural OM systems.</rdfs:comment>
+        <skos:definition>A structural matching process based on the comparison of the matched super- and subclass paths (up to a bounded depth) of two candidate entities.</skos:definition>
+        <skos:example>Two classes are matched because their direct superclasses and subclasses (within a bounded depth) are already paired by other matchers, and the structural agreement among neighbours raises confidence in the match.</skos:example>
         <skos:prefLabel>bounded path matching</skos:prefLabel>
     </owl:Class>
     
@@ -180,13 +199,29 @@
     
 
 
+    <!-- https://w3id.org/semapv/vocab/EmbeddingBasedBlocking -->
+
+    <owl:Class rdf:about="https://w3id.org/semapv/vocab/EmbeddingBasedBlocking">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Blocking"/>
+        <terms:source rdf:resource="https://doi.org/10.48550/arXiv.2310.11244"/>
+        <skos:altLabel>bi-encoder blocking</skos:altLabel>
+        <skos:altLabel>embedding-based candidate generation</skos:altLabel>
+        <skos:definition>A blocking process in which entities are encoded independently as vector embeddings and candidate pairs are produced by nearest-neighbour search or similarity-threshold filtering in the embedding space.</skos:definition>
+        <skos:example>A sentence-transformer encodes every subject and object label into a vector; an approximate nearest-neighbour index (e.g. FAISS) returns, for each object, the top-k subjects whose embeddings are closest in cosine distance, as the set of candidate pairs to be matched downstream.</skos:example>
+        <skos:prefLabel>embedding-based blocking</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/semapv/vocab/EmbeddingBasedMatching -->
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/EmbeddingBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MachineLearningBasedMatching"/>
+        <terms:source rdf:resource="https://doi.org/10.48550/arXiv.2310.11244"/>
+        <rdfs:comment>Where embedding similarity is used only to generate candidate pairs for a downstream matcher (rather than to make the final match decision), the process is more accurately classified as semapv:EmbeddingBasedBlocking.</rdfs:comment>
         <skos:altLabel>embedding similarity-based matching</skos:altLabel>
-        <skos:definition>A machine learning-based matching process in which matches are identified by comparing learned vector representations (embeddings) of entities.</skos:definition>
-        <skos:example>Matches between entities are identified by comparing their embedded representations under a vector similarity measure such as cosine similarity.</skos:example>
+        <skos:definition>A machine learning-based matching process in which matches are identified by comparing learned vector representations (embeddings) of entities under a vector similarity measure.</skos:definition>
+        <skos:example>A sentence-transformer encodes the label of each candidate entity; the pair is reported as a match when the cosine similarity between the two embeddings exceeds a fixed threshold.</skos:example>
         <skos:prefLabel>embedding-based matching process</skos:prefLabel>
     </owl:Class>
     
@@ -196,9 +231,11 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/GraphRepresentationLearningBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/EmbeddingBasedMatching"/>
+        <terms:source rdf:resource="https://doi.org/10.48550/arXiv.2503.21902"/>
         <skos:altLabel>graph embedding-based matching</skos:altLabel>
+        <skos:altLabel>graph machine learning-based matching</skos:altLabel>
         <skos:definition>An embedding-based matching process in which matches are identified by comparing learned vector representations that encode the structural and semantic features of entities and their surrounding graph context.</skos:definition>
-        <skos:example>Matches between entities are identified by analyzing learned representations that encode the structural features and relationships within graph data.</skos:example>
+        <skos:example>A graph embedding method such as node2vec, GraphSAGE, or OWL2Vec* encodes each entity together with its neighbourhood in the ontology graph; matches are produced where the resulting embeddings are close under a similarity measure.</skos:example>
         <skos:prefLabel>graph representation learning-based matching process</skos:prefLabel>
     </owl:Class>
     
@@ -230,10 +267,11 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/LLMBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/MachineLearningBasedMatching"/>
+        <terms:source rdf:resource="https://doi.org/10.1145/3587259.3627571"/>
         <rdfs:comment>Where an LLM is used only to produce embeddings that are then compared by similarity, the process is an embedding-based (transformer-based) matching process rather than an LLM-based one. The classifier is how the model is used, not which model. Multi-step, tool-using, autonomous workflows driven by an LLM are captured by semapv:AgentBasedMatching.</rdfs:comment>
         <skos:altLabel>large language model-based matching</skos:altLabel>
         <skos:definition>A machine learning-based matching process in which a large language model determines matches between entities, typically through single-step or few-shot prompting, or through fine-tuning the model to judge mapping candidates or generate mappings directly.</skos:definition>
-        <skos:example>An LLM is prompted to decide whether a subject entity and an object entity refer to the same concept, and its judgement is used to accept or reject the mapping.</skos:example>
+        <skos:example>OLaLa prompts a large language model with the labels and surrounding context of two candidate entities and uses the model&apos;s yes/no decision as the match outcome.</skos:example>
         <skos:prefLabel>LLM-based matching process</skos:prefLabel>
     </owl:Class>
     
@@ -328,9 +366,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/MachineLearningBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Matching"/>
+        <terms:source rdf:resource="https://doi.org/10.48550/arXiv.2503.21902"/>
         <skos:altLabel>ML-based matching</skos:altLabel>
         <skos:definition>A matching process in which matches between entities are predicted by machine learning models trained on labelled data or learned representations.</skos:definition>
-        <skos:example>Matches between entities are produced by applying a trained model to features derived from entity descriptions or their surrounding context.</skos:example>
+        <skos:example>A trained machine learning model classifies a pair of candidate entities as matching or not based on learned features; the OntoAligner toolkit packages a number of such models.</skos:example>
         <skos:prefLabel>machine learning-based matching process</skos:prefLabel>
     </owl:Class>
     
@@ -633,9 +672,10 @@
 
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/TransformerBasedMatching">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/EmbeddingBasedMatching"/>
+        <terms:source rdf:resource="https://doi.org/10.48550/arXiv.2112.02682"/>
         <rdfs:comment>Transformer models are a deep learning architecture designed to handle sequential data, particularly for natural language processing tasks.</rdfs:comment>
         <skos:definition>An embedding-based matching process that uses transformer models to produce contextual vector representations of entity features for similarity comparison.</skos:definition>
-        <skos:example>Matches between entities are established by comparing contextual representations of entity features produced by a transformer model.</skos:example>
+        <skos:example>BERTMap fine-tunes BERT on synonym pairs derived from the input ontologies and matches classes whose fine-tuned contextual embeddings have high cosine similarity.</skos:example>
         <skos:prefLabel>transformer-based matching process</skos:prefLabel>
     </owl:Class>
     
