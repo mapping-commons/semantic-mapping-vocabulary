@@ -1,5 +1,6 @@
 ONTBASE=http://w3id.org/semapv
 ROBOT=robot -vvv
+RUN=uv run
 DATE ?= $(shell date +%Y-%m-%d)
 
 all: semapv.owl docs/index.html
@@ -23,8 +24,7 @@ semapv.owl: semapv-metadata.owl semapv-terms.owl semapv-properties.owl context.j
 	merge --add-prefixes context.jsonld -o $@
 
 docs/index.html: semapv.owl
-	pip install pylode --break-system-packages
-	python -m pylode $< -o $@
+	$(RUN) python -m pylode $< -o $@
 
 .PHONY: help
 help:

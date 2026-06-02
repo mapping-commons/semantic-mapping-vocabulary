@@ -1,0 +1,8 @@
+[project]
+name = "semapv"
+version = "0.1.0"
+description = "Semantic Mapping Vocabulary (SEMAPV) build tooling"
+requires-python = ">=3.10"
+dependencies = [
+    "pylode>=3.1.0",
+]
