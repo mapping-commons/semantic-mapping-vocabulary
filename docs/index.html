@@ -65,6 +65,9 @@
         #classes ul li {
             margin-left: -40px;
         }
+        #metadata dd p {
+          margin: 0;
+        }
 
         ul.hlist {
             list-style-type: none;
@@ -339,7 +342,7 @@ td {
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="The property that identifies the version IRI of an ontology. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Iri</a>
             </dt>
             <dd>
-              <a href="http://w3id.org/semapv/vocab/releases/2025-01-06/semapv.owl">http://w3id.org/semapv/vocab/releases/2025-01-06/semapv.owl</a>
+              <a href="http://w3id.org/semapv/vocab/releases/2026-06-02/semapv.owl">http://w3id.org/semapv/vocab/releases/2026-06-02/semapv.owl</a>
             </dd>
           </div>
           <div>
@@ -352,6 +355,57 @@ td {
       </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
+        <div class="property entity" id="agent-basedmatchingprocess">
+          <h3>agent-based matching process
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/AgentBasedMatching</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <ul>
+                  <li><p>Distinguished from single-step LLM-based matching by the agent's autonomy over its own process. Distinguished from composite matching, which combines heterogeneous matching techniques under a fixed pipeline, by the agent's runtime control over what to do next. In current practice, agent-based matchers are predominantly driven by large language models, but this class does not commit to a particular agent technology — a specific process may also be classified as semapv:LLMBasedMatching (or any other matching class) where appropriate.</p></li>
+                  <li><p>A matching process in which an autonomous agent plans and executes a multi-step workflow — typically involving tool use, retrieval, intermediate reasoning, and self-evaluation — to determine matches between entities. The agent decides at runtime what information to gather, which techniques to apply, and when to stop.</p></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+              </th>
+              <td>
+                <pre>An agent is given a pair of candidate entities and autonomously decides to look up their labels, query an external knowledge base, retrieve definitions, compare them with a similarity measure, and revise its judgement before producing a final match decision; the OntoAligner toolkit provides agentic matching of this kind.</pre>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.48550/arXiv.2503.21902">https://doi.org/10.48550/arXiv.2503.21902</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="backgroundknowledge-basedmatchingprocess">
           <h3>background knowledge-based matching process
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -420,7 +474,7 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
               </th>
               <td>
-                <pre>The string 'ontology  matching' (two spaces between 'ontology' and 'matching) becomes 'ontology matching' (one space).</pre>
+                <pre>The string 'ontology  matching' (two spaces between 'ontology' and 'matching') becomes 'ontology matching' (one space).</pre>
               </td>
             </tr>
             <tr>
@@ -438,6 +492,119 @@ td {
               <td>
                 <span>
                   <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="blocking">
+          <h3>blocking
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/Blocking</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <ul>
+                  <li><p>Blocking is conceptually distinct from matching: a blocker is recall-oriented and typically encodes each entity independently of the others, whereas a matcher is precision-oriented and decides about a specific candidate pair. Many modern pipelines combine an embedding-based blocker with a transformer- or LLM-based matcher.</p></li>
+                  <li><p>A mapping activity that, given two sets of input entities, produces a reduced set of candidate entity pairs likely to match — favouring recall over precision — to be passed on to a downstream matching process.</p></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+              </th>
+              <td>
+                <pre>Out of 10^7 possible subject–object pairs, a blocker returns 10^5 candidate pairs by applying inexpensive comparisons such as token overlap, hash buckets, or embedding-space nearest-neighbour search.</pre>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/MappingActivity">mapping activity</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/EmbeddingBasedBlocking">embedding-based blocking</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="boundedpathmatching">
+          <h3>bounded path matching
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/BoundedPathMatching</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <ul>
+                  <li><p>Described as a structural matching technique in Euzenat &amp; Shvaiko, "Ontology Matching" (2nd ed., 2013), and implemented in classical structural OM systems such as Anchor-PROMPT.</p></li>
+                  <li><p>A structural matching process based on the comparison of the matched super- and subclass paths (up to a bounded depth) of two candidate entities.</p></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+              </th>
+              <td>
+                <pre>Two classes are matched because their direct superclasses and subclasses (within a bounded depth) are already paired by other matchers, and the structural agreement among neighbours raises confidence in the match.</pre>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1007/978-3-642-38721-0">https://doi.org/10.1007/978-3-642-38721-0</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/StructuralMatching">structural matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -613,7 +780,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>A normalization technique removing all numbers in a string. </p></td>
+              <td><p>A normalization technique removing all numbers in a string.</p></td>
             </tr>
             <tr>
               <th>
@@ -681,6 +848,170 @@ td {
               <td>
                 <span>
                   <a href="https://w3id.org/semapv/vocab/LevenshteinEditDistance">levenshtein distance</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="embedding-basedblocking">
+          <h3>embedding-based blocking
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/EmbeddingBasedBlocking</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A blocking process in which entities are encoded independently as vector embeddings and candidate pairs are produced by nearest-neighbour search or similarity-threshold filtering in the embedding space.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+              </th>
+              <td>
+                <pre>A sentence-transformer encodes every subject and object label into a vector; an approximate nearest-neighbour index (e.g. FAISS) returns, for each object, the top-k subjects whose embeddings are closest in cosine distance, as the set of candidate pairs to be matched downstream.</pre>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.48550/arXiv.2310.11244">https://doi.org/10.48550/arXiv.2310.11244</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Blocking">blocking</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="embedding-basedmatchingprocess">
+          <h3>embedding-based matching process
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/EmbeddingBasedMatching</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <ul>
+                  <li><p>Where embedding similarity is used only to generate candidate pairs for a downstream matcher (rather than to make the final match decision), the process is more accurately classified as semapv:EmbeddingBasedBlocking.</p></li>
+                  <li><p>A machine learning-based matching process in which matches are identified by comparing learned vector representations (embeddings) of entities under a vector similarity measure.</p></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+              </th>
+              <td>
+                <pre>A sentence-transformer encodes the label of each candidate entity; the pair is reported as a match when the cosine similarity between the two embeddings exceeds a fixed threshold.</pre>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.48550/arXiv.2310.11244">https://doi.org/10.48550/arXiv.2310.11244</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/MachineLearningBasedMatching">machine learning-based matching process</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/GraphRepresentationLearningBasedMatching">graph representation learning-based matching process</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/TransformerBasedMatching">transformer-based matching process</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="graphrepresentationlearning-basedmatchingprocess">
+          <h3>graph representation learning-based matching process
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/GraphRepresentationLearningBasedMatching</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>An embedding-based matching process in which matches are identified by comparing learned vector representations that encode the structural and semantic features of entities and their surrounding graph context.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+              </th>
+              <td>
+                <pre>A graph embedding method such as node2vec, GraphSAGE, or OWL2Vec* encodes each entity together with its neighbourhood in the ontology graph; matches are produced where the resulting embeddings are close under a similarity measure.</pre>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.48550/arXiv.2503.21902">https://doi.org/10.48550/arXiv.2503.21902</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/EmbeddingBasedMatching">embedding-based matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -759,6 +1090,57 @@ td {
               <td>
                 <span>
                   <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="LLM-basedmatchingprocess">
+          <h3>LLM-based matching process
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/LLMBasedMatching</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <ul>
+                  <li><p>Where an LLM is used only to produce embeddings that are then compared by similarity, the process is an embedding-based (transformer-based) matching process rather than an LLM-based one. The classifier is how the model is used, not which model. Multi-step, tool-using, autonomous workflows driven by an LLM are captured by semapv:AgentBasedMatching.</p></li>
+                  <li><p>A machine learning-based matching process in which a large language model determines matches between entities, typically through single-step or few-shot prompting, or through fine-tuning the model to judge mapping candidates or generate mappings directly.</p></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+              </th>
+              <td>
+                <pre>OLaLa prompts a large language model with the labels and surrounding context of two candidate entities and uses the model's yes/no decision as the match outcome.</pre>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1145/3587259.3627571">https://doi.org/10.1145/3587259.3627571</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/MachineLearningBasedMatching">machine learning-based matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1051,6 +1433,73 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="machinelearning-basedmatchingprocess">
+          <h3>machine learning-based matching process
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/MachineLearningBasedMatching</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A matching process in which matches between entities are predicted by machine learning models trained on labelled data or learned representations.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+              </th>
+              <td>
+                <pre>A trained machine learning model classifies a pair of candidate entities as matching or not based on learned features; the OntoAligner toolkit packages a number of such models.</pre>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.1145/511446.511532">https://doi.org/10.1145/511446.511532</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/Matching">matching process</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/EmbeddingBasedMatching">embedding-based matching process</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/LLMBasedMatching">LLM-based matching process</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="manualmappingcuration">
           <h3>manual mapping curation
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -1066,7 +1515,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>An matching process that is performed by a human agent and is based on human judgement and domain knowledge.</p></td>
+              <td><p>A matching process that is performed by a human agent and is based on human judgement and domain knowledge.</p></td>
             </tr>
             <tr>
               <th>
@@ -1147,6 +1596,12 @@ td {
               </th>
               <td>
                 <ul>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/Blocking">blocking</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
                   <li>
                     <span>
                       <a href="https://w3id.org/semapv/vocab/MappingReview">mapping review</a>
@@ -1342,6 +1797,12 @@ td {
                 <ul>
                   <li>
                     <span>
+                      <a href="https://w3id.org/semapv/vocab/AgentBasedMatching">agent-based matching process</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="https://w3id.org/semapv/vocab/BackgroundKnowledgeBasedMatching">background knowledge-based matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
@@ -1373,6 +1834,12 @@ td {
                   <li>
                     <span>
                       <a href="https://w3id.org/semapv/vocab/LogicalReasoning">logical reasoning matching process</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://w3id.org/semapv/vocab/MachineLearningBasedMatching">machine learning-based matching process</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -2125,6 +2592,17 @@ td {
                 </span>
               </td>
             </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/BoundedPathMatching">bounded path matching</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
           </table>
         </div>
         <div class="property entity" id="substringsimilarity">
@@ -2305,6 +2783,57 @@ td {
               <td>
                 <span>
                   <a href="https://w3id.org/semapv/vocab/Normalization">normalization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="transformer-basedmatchingprocess">
+          <h3>transformer-based matching process
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/semapv/vocab/TransformerBasedMatching</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <ul>
+                  <li><p>Transformer models are a deep learning architecture designed to handle sequential data, particularly for natural language processing tasks.</p></li>
+                  <li><p>An embedding-based matching process that uses transformer models to produce contextual vector representations of entity features for similarity comparison.</p></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+              </th>
+              <td>
+                <pre>BERTMap fine-tunes BERT on synonym pairs derived from the input ontologies and matches classes whose fine-tuned contextual embeddings have high cosine similarity.</pre>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://doi.org/10.48550/arXiv.2112.02682">https://doi.org/10.48550/arXiv.2112.02682</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://w3id.org/semapv/vocab/EmbeddingBasedMatching">embedding-based matching process</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3229,9 +3758,9 @@ td {
           <span id="y">y</span>
           <span>LODE</span>
         </a>
-        <a href="https://github.com/rdflib/pyLODE/release/3.1.4" id="version">3.1.4</a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.4.4" id="version">3.4.4</a>
         <span> with the </span>
-        <a href="https://w3id.org/profile/ontpub" id="profile">OntPub</a>
+        <a href="https://linked.data.gov.au/def/ontpub" id="profile">OntPub</a>
         <span>profile</span>
       </p>
     </div>
@@ -3249,10 +3778,19 @@ td {
           </h4>
           <ul class="second">
             <li>
+              <a href="#agent-basedmatchingprocess">agent-based matching process</a>
+            </li>
+            <li>
               <a href="#backgroundknowledge-basedmatchingprocess">background knowledge-based matching process</a>
             </li>
             <li>
               <a href="#blanknormalisation">blank normalisation</a>
+            </li>
+            <li>
+              <a href="#blocking">blocking</a>
+            </li>
+            <li>
+              <a href="#boundedpathmatching">bounded path matching</a>
             </li>
             <li>
               <a href="#cardinalityfiltering">cardinality filtering</a>
@@ -3273,10 +3811,22 @@ td {
               <a href="#editdistance">edit distance</a>
             </li>
             <li>
+              <a href="#embedding-basedblocking">embedding-based blocking</a>
+            </li>
+            <li>
+              <a href="#embedding-basedmatchingprocess">embedding-based matching process</a>
+            </li>
+            <li>
+              <a href="#graphrepresentationlearning-basedmatchingprocess">graph representation learning-based matching process</a>
+            </li>
+            <li>
               <a href="#hammingdistance">hamming distance</a>
             </li>
             <li>
               <a href="#instance-basedmatchingprocess">instance-based matching process</a>
+            </li>
+            <li>
+              <a href="#LLM-basedmatchingprocess">LLM-based matching process</a>
             </li>
             <li>
               <a href="#language-basedsimilaritymeasure">language-based similarity measure</a>
@@ -3301,6 +3851,9 @@ td {
             </li>
             <li>
               <a href="#logicalreasoningmatchingprocess">logical reasoning matching process</a>
+            </li>
+            <li>
+              <a href="#machinelearning-basedmatchingprocess">machine learning-based matching process</a>
             </li>
             <li>
               <a href="#manualmappingcuration">manual mapping curation</a>
@@ -3382,6 +3935,9 @@ td {
             </li>
             <li>
               <a href="#tokenization">tokenization</a>
+            </li>
+            <li>
+              <a href="#transformer-basedmatchingprocess">transformer-based matching process</a>
             </li>
             <li>
               <a href="#unspecifiedmatchingprocess">unspecified matching process</a>

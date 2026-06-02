@@ -18,7 +18,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:semapv_voc="https://w3id.org/semapv/vocab/">
     <owl:Ontology rdf:about="http://w3id.org/semapv/vocab/semapv.owl">
-        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2026-05-29/semapv.owl"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2026-06-02/semapv.owl"/>
         <dcterms:description>The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <dcterms:title>Semantic Mapping Vocabulary</dcterms:title>
@@ -354,7 +354,7 @@
     <owl:Class rdf:about="https://w3id.org/semapv/vocab/DigitSuppression">
         <rdfs:subClassOf rdf:resource="https://w3id.org/semapv/vocab/Normalization"/>
         <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
-        <skos:definition>A normalization technique removing all numbers in a string. </skos:definition>
+        <skos:definition>A normalization technique removing all numbers in a string.</skos:definition>
         <skos:example>The string &apos;ontology1&apos; becomes &apos;ontology&apos;.</skos:example>
         <skos:prefLabel>digit suppression</skos:prefLabel>
     </owl:Class>
