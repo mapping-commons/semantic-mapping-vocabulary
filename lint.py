@@ -12,11 +12,11 @@ import pandas as pd
 
 HERE = Path(__file__).parent.resolve()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     fail = False
     for path in HERE.glob("*.tsv"):
         original = path.read_text()
-        corrected = pd.read_csv(path, sep="\t").to_csv(sep='\t', index=False)
+        corrected = pd.read_csv(path, sep="\t").to_csv(sep="\t", index=False)
         if original != corrected:
             print(f"TSV not formatted properly: {path}")
             fail = True
