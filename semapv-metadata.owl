@@ -1,11 +1,16 @@
-
 Prefix(:=<https://w3id.org/semapv/vocab/>)
+Prefix(semapv:=<https://w3id.org/semapv/vocab/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(IAO:=<http://purl.obolibrary.org/obo/IAO_>)
+Prefix(NCBITaxon:=<http://purl.obolibrary.org/obo/NCBITaxon_>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(orcid:=<https://orcid.org/>)
 
 
 Ontology(<https://w3id.org/semapv/semapv.owl>
@@ -13,10 +18,35 @@ Ontology(<https://w3id.org/semapv/semapv.owl>
 Annotation(dcterms:description "The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.")
 Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "Semantic Mapping Vocabulary")
+Annotation(IAO:0000700 semapv:MappingActivity)
+Annotation(IAO:0000700 semapv:Mapping)
+Annotation(IAO:0000700 semapv:SimilarityMeasure)
+Annotation(dcterms:creator orcid:0000-0002-7356-1779)
+Annotation(dcterms:contributor orcid:0000-0003-4423-4370)
+Annotation(dcterms:contributor orcid:0000-0002-6095-8718)
 
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(dcterms:creator))
+Declaration(AnnotationProperty(dcterms:contributor))
+
+Declaration(AnnotationProperty(IAO:0000700))
+AnnotationAssertion(skos:prefLabel IAO:0000700 "has ontology root term")
+
+Declaration(Class(NCBITaxon:9606))
+AnnotationAssertion(skos:prefLabel NCBITaxon:9606 "human")
+
+Declaration(NamedIndividual(orcid:0000-0002-7356-1779))
+ClassAssertion(NCBITaxon:9606 orcid:0000-0002-7356-1779)
+AnnotationAssertion(skos:prefLabel orcid:0000-0002-7356-1779 "Nicolas Matentzoglu")
+
+Declaration(NamedIndividual(orcid:0000-0003-4423-4370))
+ClassAssertion(NCBITaxon:9606 orcid:0000-0003-4423-4370)
+AnnotationAssertion(skos:prefLabel orcid:0000-0003-4423-4370 "Charles Tapley Hoyt")
+
+Declaration(NamedIndividual(orcid:0000-0002-6095-8718))
+ClassAssertion(NCBITaxon:9606 orcid:0000-0002-6095-8718)
+AnnotationAssertion(skos:prefLabel orcid:0000-0002-6095-8718 "Damien Goutte-Gattat")
 
 )
-
