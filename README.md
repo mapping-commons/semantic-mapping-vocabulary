@@ -17,7 +17,7 @@ To cite: http://doi.org/10.5281/zenodo.7672104
 - [Nicolas Matentzoglu](https://orcid.org/0000-0002-7356-1779) (Semanticly Ltd;
   [@matentzn](https://github.com/matentzn))
 - [Chris Mungall](https://orcid.org/0000-0002-6601-2165) (LBL;
-  [@cmungall](https://github.com/matentzn))
+  [@cmungall](https://github.com/cmungall))
 - [Ernesto Jimenez-Ruiz](https://orcid.org/0000-0002-9083-4599) (City,
   University of London)
 - [Catia Pesquita](https://orcid.org/0000-0002-1847-9393) (University of Lisbon)
