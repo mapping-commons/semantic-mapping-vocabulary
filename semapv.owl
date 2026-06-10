@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://w3id.org/semapv/vocab/semapv.owl#"
      xml:base="http://w3id.org/semapv/vocab/semapv.owl"
-     xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:dce="http://purl.org/dc/elements/1.1/"
+     xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
      xmlns:doi="https://doi.org/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -12,13 +11,19 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:schema="http://schema.org/"
-     xmlns:semapv="https://w3id.org/semapv/"
+     xmlns:orcid="https://orcid.org/"
+     xmlns:semapv="https://w3id.org/semapv/vocab/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:semapv_voc="https://w3id.org/semapv/vocab/">
+     xmlns:NCBITaxon="http://purl.obolibrary.org/obo/NCBITaxon_">
     <owl:Ontology rdf:about="http://w3id.org/semapv/vocab/semapv.owl">
-        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2026-06-02/semapv.owl"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/semapv/vocab/releases/2026-06-10/semapv.owl"/>
+        <obo:IAO_0000700 rdf:resource="https://w3id.org/semapv/vocab/Mapping"/>
+        <obo:IAO_0000700 rdf:resource="https://w3id.org/semapv/vocab/MappingActivity"/>
+        <obo:IAO_0000700 rdf:resource="https://w3id.org/semapv/vocab/SimilarityMeasure"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-6095-8718"/>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-4423-4370"/>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-7356-1779"/>
         <dcterms:description>The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <dcterms:title>Semantic Mapping Vocabulary</dcterms:title>
@@ -34,6 +39,26 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000700 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000700">
+        <skos:prefLabel>has ontology root term</skos:prefLabel>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
@@ -235,6 +260,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_9606 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606">
+        <skos:prefLabel>human</skos:prefLabel>
+    </owl:Class>
     
 
 
@@ -871,6 +904,44 @@
         <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-642-38721-0"/>
         <skos:prefLabel>ngram similarity</skos:prefLabel>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://orcid.org/0000-0002-6095-8718 -->
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-6095-8718">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <skos:prefLabel>Damien Goutte-Gattat</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0002-7356-1779 -->
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-7356-1779">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <skos:prefLabel>Nicolas Matentzoglu</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0003-4423-4370 -->
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0003-4423-4370">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <skos:prefLabel>Charles Tapley Hoyt</skos:prefLabel>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
