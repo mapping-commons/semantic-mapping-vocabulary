@@ -20,4 +20,4 @@ if __name__ == '__main__':
         if original != corrected:
             print(f"TSV not formatted properly: {path}")
             fail = True
-    sys.exit(0 if fail else 1)
+    sys.exit(1 if fail else 0)
