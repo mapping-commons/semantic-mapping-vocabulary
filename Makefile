@@ -1,9 +1,14 @@
 ONTBASE=http://w3id.org/semapv
 ROBOT=robot -vvv
-RUN=uv run
 DATE ?= $(shell date +%Y-%m-%d)
 
 all: semapv.owl docs/index.html
+
+clean:
+	rm -r docs/
+	rm semapv.owl
+	rm semapv-properties.owl
+	rm semapv-terms.owl
 
 semapv-terms.owl: semapv-terms.tsv
 	$(ROBOT) template --template $< --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "semapv: https://w3id.org/semapv/vocab/" \
@@ -24,7 +29,8 @@ semapv.owl: semapv-metadata.owl semapv-terms.owl semapv-properties.owl context.j
 	merge --add-prefixes context.jsonld -o $@
 
 docs/index.html: semapv.owl
-	$(RUN) python -m pylode $< -o $@
+	mkdir -p docs/
+	uvx pylode $< -o $@
 
 .PHONY: help
 help:
