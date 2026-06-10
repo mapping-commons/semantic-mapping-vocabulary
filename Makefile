@@ -11,11 +11,11 @@ clean:
 	rm semapv-terms.owl
 
 semapv-terms.owl: semapv-terms.tsv
-	$(ROBOT) template --template $< --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "semapv: https://w3id.org/semapv/vocab/" \
+	$(ROBOT) template --template $< --add-prefixes context.jsonld \
 		annotate --ontology-iri $(ONTBASE)/vocab/$@ --version-iri $(ONTBASE)/vocab/releases/$(DATE)/$@ -o $@
 
 semapv-properties.owl: semapv-properties.tsv
-	$(ROBOT) template --template $< --prefix "skos: http://www.w3.org/2004/02/skos/core#" --prefix "semapv: https://w3id.org/semapv/vocab/" \
+	$(ROBOT) template --template $< --add-prefixes context.jsonld \
 		annotate --ontology-iri $(ONTBASE)/vocab/$@ --version-iri $(ONTBASE)/vocab/releases/$(DATE)/$@ -o $@
 
 SEMAPV_TERMS_URL=https://docs.google.com/spreadsheets/d/e/2PACX-1vQS6dVyRqEdXCtimXw1nxX77NCmJCfm_2sOL0eCkt_7MlTt8wCNgE8iw9pLACPIuwZDvu64WtsqtREQ/pub?gid=0&single=true&output=tsv
