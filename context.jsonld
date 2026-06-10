@@ -11,11 +11,7 @@
 		"doi": "https://doi.org/",
 		"prov": "http://www.w3.org/ns/prov#",
 		"skos": "http://www.w3.org/2004/02/skos/core#",
-		"cc": "http://creativecommons.org/ns#",
-		"schema": "http://schema.org/",
 
-		"terms": "http://purl.org/dc/terms/",
-		"semapv_voc": "https://w3id.org/semapv/vocab/",
-		"semapv": "https://w3id.org/semapv/"
+		"semapv": "https://w3id.org/semapv/vocab/"
 	}
 }
