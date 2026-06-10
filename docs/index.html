@@ -290,6 +290,19 @@ td {
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
+    "https://schema.org/contributor": [
+      {
+        "@id": "https://orcid.org/0000-0002-6095-8718"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-4423-4370"
+      }
+    ],
+    "https://schema.org/creator": [
+      {
+        "@id": "https://orcid.org/0000-0002-7356-1779"
+      }
+    ],
     "https://schema.org/description": [
       {
         "@value": "The Semantic Mapping Vocabulary provides and defines terms used for creating and maintaining semantic mappings, in particular mapping metadata."
@@ -331,6 +344,35 @@ td {
           </div>
           <div>
             <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/creator" title="An entity responsible for making the resource. Defined in DCMI Metadata Terms">Creator</a>
+            </dt>
+            <dd>
+              <span>
+                <a href="https://orcid.org/0000-0002-7356-1779">https://orcid.org/0000-0002-7356-1779</a>
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/contributor" title="An entity responsible for making contributions to the resource. Defined in DCMI Metadata Terms">Contributor</a>
+            </dt>
+            <dd>
+              <ul>
+                <li>
+                  <span>
+                    <a href="https://orcid.org/0000-0002-6095-8718">https://orcid.org/0000-0002-6095-8718</a>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <a href="https://orcid.org/0000-0003-4423-4370">https://orcid.org/0000-0003-4423-4370</a>
+                  </span>
+                </li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/license" title="A legal document giving official permission to do something with the resource. Defined in DCMI Metadata Terms">License</a>
             </dt>
             <dd>
@@ -342,7 +384,7 @@ td {
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="The property that identifies the version IRI of an ontology. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Iri</a>
             </dt>
             <dd>
-              <a href="http://w3id.org/semapv/vocab/releases/2026-06-02/semapv.owl">http://w3id.org/semapv/vocab/releases/2026-06-02/semapv.owl</a>
+              <a href="http://w3id.org/semapv/vocab/releases/2026-06-10/semapv.owl">http://w3id.org/semapv/vocab/releases/2026-06-10/semapv.owl</a>
             </dd>
           </div>
           <div>
@@ -355,6 +397,19 @@ td {
       </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
+        <div class="property entity" id="human">
+          <h3>human
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.obolibrary.org/obo/NCBITaxon_9606</code>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="agent-basedmatchingprocess">
           <h3>agent-based matching process
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -2913,6 +2968,45 @@ td {
       </div>
       <div class="section" id="annotationproperties">
         <h2>Annotation Properties</h2>
+        <div class="property entity" id="hasontologyrootterm">
+          <h3>has ontology root term
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.obolibrary.org/obo/IAO_0000700</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="contributor">
+          <h3>contributor
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/terms/contributor</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="creator">
+          <h3>creator
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/terms/creator</code>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="description">
           <h3>description
             <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
@@ -3695,6 +3789,14 @@ td {
       <div id="namespaces">
         <h2>Namespaces</h2>
         <dl>
+          <dt id="IAO">IAO</dt>
+          <dd>
+            <code>http://purl.obolibrary.org/obo/IAO_</code>
+          </dd>
+          <dt id="NCBITaxon">NCBITaxon</dt>
+          <dd>
+            <code>http://purl.obolibrary.org/obo/NCBITaxon_</code>
+          </dd>
           <dt id="dcterms">dcterms</dt>
           <dd>
             <code>http://purl.org/dc/terms/</code>
@@ -3707,9 +3809,21 @@ td {
           <dd>
             <code>http://w3id.org/semapv/vocab/</code>
           </dd>
+          <dt id="obo">obo</dt>
+          <dd>
+            <code>http://purl.obolibrary.org/obo/</code>
+          </dd>
+          <dt id="orcid">orcid</dt>
+          <dd>
+            <code>https://orcid.org/</code>
+          </dd>
           <dt id="owl">owl</dt>
           <dd>
             <code>http://www.w3.org/2002/07/owl#</code>
+          </dd>
+          <dt id="prov">prov</dt>
+          <dd>
+            <code>http://www.w3.org/ns/prov#</code>
           </dd>
           <dt id="rdf">rdf</dt>
           <dd>
@@ -3720,10 +3834,6 @@ td {
             <code>http://www.w3.org/2000/01/rdf-schema#</code>
           </dd>
           <dt id="semapv">semapv</dt>
-          <dd>
-            <code>https://w3id.org/semapv/</code>
-          </dd>
-          <dt id="semapv_voc">semapv_voc</dt>
           <dd>
             <code>https://w3id.org/semapv/vocab/</code>
           </dd>
@@ -3777,6 +3887,9 @@ td {
             <a href="#classes">Classes</a>
           </h4>
           <ul class="second">
+            <li>
+              <a href="#human">human</a>
+            </li>
             <li>
               <a href="#agent-basedmatchingprocess">agent-based matching process</a>
             </li>
@@ -3953,6 +4066,15 @@ td {
           </h4>
           <ul class="second">
             <li>
+              <a href="#hasontologyrootterm">has ontology root term</a>
+            </li>
+            <li>
+              <a href="#contributor">contributor</a>
+            </li>
+            <li>
+              <a href="#creator">creator</a>
+            </li>
+            <li>
               <a href="#description">description</a>
             </li>
             <li>
@@ -4020,6 +4142,12 @@ td {
           </h4>
           <ul class="second">
             <li>
+              <a href="#IAO">IAO</a>
+            </li>
+            <li>
+              <a href="#NCBITaxon">NCBITaxon</a>
+            </li>
+            <li>
               <a href="#dcterms">dcterms</a>
             </li>
             <li>
@@ -4029,7 +4157,16 @@ td {
               <a href="#ns1">ns1</a>
             </li>
             <li>
+              <a href="#obo">obo</a>
+            </li>
+            <li>
+              <a href="#orcid">orcid</a>
+            </li>
+            <li>
               <a href="#owl">owl</a>
+            </li>
+            <li>
+              <a href="#prov">prov</a>
             </li>
             <li>
               <a href="#rdf">rdf</a>
@@ -4039,9 +4176,6 @@ td {
             </li>
             <li>
               <a href="#semapv">semapv</a>
-            </li>
-            <li>
-              <a href="#semapv_voc">semapv_voc</a>
             </li>
             <li>
               <a href="#skos">skos</a>
