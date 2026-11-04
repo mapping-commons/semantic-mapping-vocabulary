@@ -11,6 +11,8 @@ Prefix(IAO:=<http://purl.obolibrary.org/obo/IAO_>)
 Prefix(NCBITaxon:=<http://purl.obolibrary.org/obo/NCBITaxon_>)
 Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
 Prefix(orcid:=<https://orcid.org/>)
+Prefix(doi:=<https://doi.org/>)
+Prefix(fabio:=<http://purl.org/spar/fabio/>)
 
 
 Ontology(<https://w3id.org/semapv/semapv.owl>
@@ -21,6 +23,7 @@ Annotation(dcterms:title "Semantic Mapping Vocabulary")
 Annotation(IAO:0000700 semapv:MappingActivity)
 Annotation(IAO:0000700 semapv:Mapping)
 Annotation(IAO:0000700 semapv:SimilarityMeasure)
+Annotation(IAO:0000700 semapv:InferenceRule)
 Annotation(dcterms:creator orcid:0000-0002-7356-1779)
 Annotation(dcterms:contributor orcid:0000-0003-4423-4370)
 Annotation(dcterms:contributor orcid:0000-0002-6095-8718)
@@ -33,9 +36,13 @@ Declaration(AnnotationProperty(dcterms:contributor))
 
 Declaration(AnnotationProperty(IAO:0000700))
 AnnotationAssertion(skos:prefLabel IAO:0000700 "has ontology root term")
+AnnotationAssertion(rdfs:isDefinedBy IAO:0000700 <http://purl.obolibrary.org/obo/iao.owl>)
 
 Declaration(Class(NCBITaxon:9606))
 AnnotationAssertion(skos:prefLabel NCBITaxon:9606 "human")
+
+Declaration(Class(fabio:JournalArticle))
+AnnotationAssertion(skos:prefLabel fabio:JournalArticle "journal article")
 
 Declaration(NamedIndividual(orcid:0000-0002-7356-1779))
 ClassAssertion(NCBITaxon:9606 orcid:0000-0002-7356-1779)
@@ -48,5 +55,9 @@ AnnotationAssertion(skos:prefLabel orcid:0000-0003-4423-4370 "Charles Tapley Hoy
 Declaration(NamedIndividual(orcid:0000-0002-6095-8718))
 ClassAssertion(NCBITaxon:9606 orcid:0000-0002-6095-8718)
 AnnotationAssertion(skos:prefLabel orcid:0000-0002-6095-8718 "Damien Goutte-Gattat")
+
+Declaration(NamedIndividual(doi:10.1093/bioinformatics/btaf542))
+ClassAssertion(fabio:JournalArticle doi:10.1093/bioinformatics/btaf542)
+AnnotationAssertion(skos:prefLabel doi:10.1093/bioinformatics/btaf542 "Assembly and reasoning over semantic mappings at scale for biomedical data integration")
 
 )

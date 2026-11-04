@@ -1,6 +1,7 @@
 {
 	"@context": {
 		"obo": "http://purl.obolibrary.org/obo/",
+		"IAO": "http://purl.obolibrary.org/obo/IAO_",
 		"oboInOwl": "http://www.geneontology.org/formats/oboInOwl#",
 
 		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -11,6 +12,7 @@
 		"doi": "https://doi.org/",
 		"prov": "http://www.w3.org/ns/prov#",
 		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"fabio": "http://purl.org/spar/fabio/",
 
 		"semapv": "https://w3id.org/semapv/vocab/"
 	}
